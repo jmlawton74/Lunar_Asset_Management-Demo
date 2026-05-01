@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lunar Asset Management Website Portfolio</title>
+  <meta name="description" content="Preview index for the Lunar Asset Management property website portfolio.">
+  <style>
+    :root {
+      --ink: #18221f;
+      --muted: #5e6b66;
+      --paper: #f6f3ec;
+      --surface: #ffffff;
+      --primary: #275142;
+      --secondary: #c9852b;
+      --border: rgba(39, 81, 66, 0.18);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    main {
+      margin: 0 auto;
+      max-width: 980px;
+      padding: 6rem 1.25rem;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 4.4rem);
+      line-height: 1.05;
+      margin: 0 0 1rem;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 720px;
+    }
+
+    .site-list {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      list-style: none;
+      margin: 2rem 0;
+      padding: 0;
+    }
+
+    .site-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+    }
+
+    .site-card h2 {
+      font-size: 1.35rem;
+      line-height: 1.2;
+      margin: 0 0 0.35rem;
+    }
+
+    a {
+      color: var(--primary);
+      font-weight: 800;
+      text-underline-offset: 0.25em;
+    }
+
+    .button {
+      align-items: center;
+      background: var(--primary);
+      border-radius: 8px;
+      color: #fff;
+      display: inline-flex;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0.75rem 1rem;
+      text-decoration: none;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      background: var(--secondary);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Lunar Asset Management Website Portfolio</h1>
+    <p>This local preview index is generated automatically. Use it to open each property site after running the build.</p>
+    <ul class="site-list">
+      
+        <li class="site-card">
+          <h2>Oak Haven Apartments</h2>
+          <p>Springfield, IL<br>Comfortable apartment living in your favorite neighborhood</p>
+          <a class="button" href="./oak-haven/">Open Website</a>
+        </li>
+      
+    </ul>
+    <p>Direct link: <a href="./oak-haven/">Oak Haven Apartments</a></p>
+  </main>
+</body>
+</html>
