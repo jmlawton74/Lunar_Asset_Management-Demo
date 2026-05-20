@@ -6,5 +6,8 @@ Live site after GitHub Pages publishes:
 
 https://jmlawton74.github.io/Lunar_Asset_Management-Demo/
 
-The working source repository can stay private. To update this demo, rebuild the source project, copy the contents of `Website Portfolio/dist` into this repository, commit, and push.
+Direct Imperial Manor preview:
 
+https://jmlawton74.github.io/Lunar_Asset_Management-Demo/imperial-manor/
+
+The working source repository can stay private. To update this demo, rebuild the source project, copy the contents of `Website Portfolio/dist` into this repository, commit, and push.
