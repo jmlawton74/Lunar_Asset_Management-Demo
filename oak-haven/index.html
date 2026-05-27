@@ -47,15 +47,18 @@
   </header>
   <main id="main">
     
-    <section class="hero">
+    <section class="hero" data-photo-open data-full-src="https://images.unsplash.com/photo-1560184897-ae75f418493e?auto=format&amp;fit=crop&amp;w=1800&amp;q=80" data-alt="Apartment community exterior with landscaped grounds">
       <img src="https://images.unsplash.com/photo-1560184897-ae75f418493e?auto=format&amp;fit=crop&amp;w=1800&amp;q=80" alt="Apartment community exterior with landscaped grounds">
       <div class="section-inner hero-content">
-        <span class="eyebrow">Welcome to</span>
-        <h1>Oak Haven Apartments</h1>
-        <p>Everyday comfort, practical amenities, and a location that keeps life moving.</p>
-        <div class="hero-actions">
-          <a class="button" href="./floor-plans/">View Floor Plans</a>
-          <a class="button secondary" href="./contact/">Schedule a Tour</a>
+        
+        <div class="hero-copy">
+          <span class="eyebrow">Welcome to</span>
+          <h1>Oak Haven Apartments</h1>
+          <p>Everyday comfort, practical amenities, and a location that keeps life moving.</p>
+          <div class="hero-actions">
+            <a class="button" href="./floor-plans/">View Floor Plans</a>
+            <a class="button secondary" href="./contact/">Schedule a Tour</a>
+          </div>
         </div>
       </div>
     </section>
@@ -68,7 +71,11 @@
           <p><a class="text-link" href="./amenities/">Explore amenities</a></p>
         </div>
         <div class="media">
-          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Bright apartment living room with neutral furniture">
+          
+    <button class="media-button" type="button" data-photo-open data-full-src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" data-alt="Bright apartment living room with neutral furniture" aria-label="Open photo: Bright apartment living room with neutral furniture">
+      <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Bright apartment living room with neutral furniture">
+    </button>
+  
         </div>
       </div>
     </section>
@@ -91,7 +98,11 @@
         <div class="card-grid">
           
     <article class="card" data-floor-beds="1">
+      
+    <button class="card-photo-button" type="button" data-photo-open data-full-src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&amp;fit=crop&amp;w=900&amp;q=80" data-alt="Bedroom in a model apartment" aria-label="Open photo: Bedroom in a model apartment">
       <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Bedroom in a model apartment">
+    </button>
+  
       <div class="card-body">
         <h2>The Acorn</h2>
         <p class="meta">1 Bed / 1 Bath / 720 Sq Ft</p>
@@ -104,7 +115,11 @@
     </article>
   
     <article class="card" data-floor-beds="2">
+      
+    <button class="card-photo-button" type="button" data-photo-open data-full-src="https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&amp;fit=crop&amp;w=900&amp;q=80" data-alt="Open apartment living and dining space" aria-label="Open photo: Open apartment living and dining space">
       <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Open apartment living and dining space">
+    </button>
+  
       <div class="card-body">
         <h2>The Laurel</h2>
         <p class="meta">2 Bed / 1 Bath / 930 Sq Ft</p>
@@ -117,7 +132,11 @@
     </article>
   
     <article class="card" data-floor-beds="2">
+      
+    <button class="card-photo-button" type="button" data-photo-open data-full-src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&amp;fit=crop&amp;w=900&amp;q=80" data-alt="Modern apartment kitchen" aria-label="Open photo: Modern apartment kitchen">
       <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Modern apartment kitchen">
+    </button>
+  
       <div class="card-body">
         <h2>The Willow</h2>
         <p class="meta">2 Bed / 2 Bath / 1,080 Sq Ft</p>
@@ -142,7 +161,11 @@
           <p><a class="text-link" href="./neighborhood/">See what's nearby</a></p>
         </div>
         <div class="media">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Apartment building exterior">
+          
+    <button class="media-button" type="button" data-photo-open data-full-src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" data-alt="Apartment building exterior" aria-label="Open photo: Apartment building exterior">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Apartment building exterior">
+    </button>
+  
         </div>
       </div>
     </section>
@@ -166,6 +189,23 @@
     </section>
   
   </main>
+  
+  <dialog class="lightbox" data-lightbox aria-label="Photo viewer">
+    <div class="lightbox-inner">
+      <div class="lightbox-stage" data-lightbox-stage>
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="" draggable="false" data-lightbox-image>
+      </div>
+      <div class="lightbox-footer">
+        <p data-lightbox-caption></p>
+        <div class="lightbox-controls" aria-label="Photo zoom controls">
+          <button class="button secondary icon-button" type="button" data-lightbox-zoom-out aria-label="Zoom out">-</button>
+          <button class="button secondary icon-button" type="button" data-lightbox-reset aria-label="Reset zoom">Reset</button>
+          <button class="button secondary icon-button" type="button" data-lightbox-zoom-in aria-label="Zoom in">+</button>
+          <button class="button secondary" type="button" data-lightbox-close>Close</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
   
   <footer class="site-footer">
     <div class="footer-inner">
