@@ -581,8 +581,11 @@ textarea {
 
 .gallery-grid {
   display: grid;
-  gap: 0.85rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  grid-template-columns: minmax(0, 1fr);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px;
 }
 
 .gallery-button,
@@ -602,8 +605,9 @@ textarea {
 }
 
 .gallery-button img {
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  aspect-ratio: 16 / 10;
+  background: #050505;
+  object-fit: contain;
   width: 100%;
 }
 
@@ -820,7 +824,6 @@ textarea {
 
   .card-grid,
   .list-columns,
-  .gallery-grid,
   .neighborhood-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -934,7 +937,6 @@ textarea {
   .feature-list,
   .card-grid,
   .list-columns,
-  .gallery-grid,
   .neighborhood-grid,
   .form-row {
     grid-template-columns: 1fr;
