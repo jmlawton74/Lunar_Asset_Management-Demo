@@ -250,7 +250,7 @@ textarea {
 }
 
 .hero::before {
-  background: linear-gradient(90deg, rgba(14, 22, 18, 0.78), rgba(14, 22, 18, 0.22));
+  background: var(--hero-overlay, linear-gradient(90deg, rgba(14, 22, 18, 0.78), rgba(14, 22, 18, 0.22)));
   content: "";
   inset: 0;
   position: absolute;
