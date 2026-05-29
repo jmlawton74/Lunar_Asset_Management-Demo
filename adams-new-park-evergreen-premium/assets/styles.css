@@ -588,6 +588,12 @@ textarea {
   width: 100%;
 }
 
+.floor-plan-button img {
+  background: #fbf7ef;
+  object-fit: contain;
+  padding: 0.35rem;
+}
+
 .card-body {
   padding: 1.25rem;
 }

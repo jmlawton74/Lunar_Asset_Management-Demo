@@ -1,16 +1,65 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
-  <title id="title">Generic one-bedroom floor plan preview</title>
-  <desc id="desc">A simplified one-bedroom, one-bath apartment floor plan diagram.</desc>
-  <rect width="900" height="620" fill="#fbf7ef"/>
-  <rect x="70" y="70" width="760" height="480" rx="10" fill="#ffffff" stroke="#32124f" stroke-width="12"/>
-  <path d="M70 255h315v295M385 255h445M560 255v295M70 255V70M385 70v185" fill="none" stroke="#32124f" stroke-width="8"/>
-  <rect x="98" y="100" width="255" height="120" fill="#efe7d9" stroke="#d8af4f" stroke-width="4"/>
-  <rect x="98" y="295" width="255" height="220" fill="#f6f0e7" stroke="#d8af4f" stroke-width="4"/>
-  <rect x="420" y="295" width="110" height="220" fill="#efe7d9" stroke="#d8af4f" stroke-width="4"/>
-  <rect x="595" y="295" width="200" height="220" fill="#f6f0e7" stroke="#d8af4f" stroke-width="4"/>
-  <text x="225" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#32124f">Kitchen</text>
-  <text x="225" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#32124f">Living</text>
-  <text x="475" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#32124f">Bath</text>
-  <text x="695" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#32124f">Bedroom</text>
-  <text x="450" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#6f4a8e">1 + 1 | 850 SQ FT</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 760" role="img" aria-labelledby="title desc">
+  <title id="title">Generic one-bedroom apartment floor plan preview</title>
+  <desc id="desc">A preview of the generic one-bedroom apartment floor plan with a labeled front door, entry, kitchen, bath, hall, bedroom, living and dining area, windows, closets, and balcony.</desc>
+  <defs>
+    <style>
+      .label{font-family:Arial,sans-serif;font-weight:700;fill:#32124f}
+      .small{font-family:Arial,sans-serif;font-weight:700;fill:#6f4a8e}
+      .wall{stroke:#32124f;stroke-width:13;stroke-linecap:square;stroke-linejoin:miter;fill:none}
+      .inner{stroke:#32124f;stroke-width:7;stroke-linecap:square;stroke-linejoin:miter;fill:none}
+      .door{stroke:#6f4a8e;stroke-width:5;stroke-linecap:round;fill:none}
+      .window{stroke:#77a8c6;stroke-width:11;stroke-linecap:round}
+      .fixture{stroke:#6f4a8e;stroke-width:4;fill:none}
+      .fixtureFill{fill:#fffdf9;stroke:#6f4a8e;stroke-width:4}
+    </style>
+  </defs>
+  <rect width="1100" height="760" fill="#fbf7ef"/>
+  <text x="550" y="52" text-anchor="middle" class="small" font-size="34">1 + 1 | 850 SQ FT</text>
+
+  <rect x="430" y="650" width="300" height="68" fill="#efe7d9" stroke="#d8af4f" stroke-width="5"/>
+  <text x="580" y="690" text-anchor="middle" class="small" font-size="26">Balcony</text>
+
+  <rect x="90" y="90" width="920" height="560" fill="#fffdf9"/>
+  <rect x="112" y="112" width="266" height="196" fill="#efe7d9" stroke="#d8af4f" stroke-width="4"/>
+  <rect x="422" y="112" width="156" height="148" fill="#ffffff" stroke="#6f4a8e" stroke-width="4"/>
+  <rect x="626" y="112" width="362" height="196" fill="#f7f1e8" stroke="#d8af4f" stroke-width="4"/>
+  <rect x="112" y="352" width="226" height="276" fill="#fbf7ef" stroke="#d8af4f" stroke-width="4"/>
+  <rect x="360" y="352" width="628" height="276" fill="#f7f1e8" stroke="#d8af4f" stroke-width="4"/>
+  <rect x="420" y="282" width="160" height="46" fill="#fbf7ef" stroke="#d8af4f" stroke-width="4"/>
+  <rect x="792" y="112" width="178" height="54" fill="#ffffff" stroke="#6f4a8e" stroke-width="4"/>
+  <rect x="132" y="540" width="168" height="82" fill="#ffffff" stroke="#6f4a8e" stroke-width="4"/>
+
+  <path class="wall" d="M90 90H1010V650H730M430 650H90V550M90 470V90"/>
+  <path class="inner" d="M400 90V330M90 330H200M305 330H400M600 90V330M400 280H465M535 280H600M600 330H645M720 330H1010M132 540H300V622H132V540"/>
+
+  <line class="window" x1="150" y1="90" x2="344" y2="90"/>
+  <line class="window" x1="700" y1="90" x2="936" y2="90"/>
+  <line class="window" x1="1010" y1="150" x2="1010" y2="282"/>
+  <line class="window" x1="790" y1="650" x2="950" y2="650"/>
+  <rect x="460" y="640" width="240" height="18" rx="9" fill="#77a8c6"/>
+
+  <path class="door" d="M90 550H170M90 550Q170 550 170 470"/>
+  <path class="door" d="M465 280V215M465 280Q535 280 535 215"/>
+  <path class="door" d="M645 330V258M645 330Q720 330 720 258"/>
+  <path class="door" d="M300 580H246M300 580Q246 580 246 625"/>
+
+  <rect x="126" y="126" width="224" height="34" class="fixtureFill"/>
+  <rect x="126" y="160" width="42" height="126" class="fixtureFill"/>
+  <circle cx="220" cy="144" r="12" class="fixture"/>
+  <rect x="438" y="126" width="124" height="44" rx="6" class="fixtureFill"/>
+  <circle cx="546" cy="214" r="18" class="fixture"/>
+  <rect x="438" y="206" width="52" height="42" rx="6" class="fixtureFill"/>
+  <line x1="812" y1="138" x2="950" y2="138" class="fixture"/>
+  <line x1="150" y1="580" x2="280" y2="580" class="fixture"/>
+
+  <text x="245" y="232" text-anchor="middle" class="label" font-size="34">Kitchen</text>
+  <text x="500" y="206" text-anchor="middle" class="label" font-size="30">Bath</text>
+  <text x="500" y="318" text-anchor="middle" class="small" font-size="22">Hall</text>
+  <text x="807" y="236" text-anchor="middle" class="label" font-size="38">Bedroom</text>
+  <text x="881" y="151" text-anchor="middle" class="small" font-size="19">Closet</text>
+  <text x="216" y="486" text-anchor="middle" class="label" font-size="31">Entry</text>
+  <text x="216" y="591" text-anchor="middle" class="small" font-size="20">Coat</text>
+  <text x="216" y="615" text-anchor="middle" class="small" font-size="20">Closet</text>
+  <text x="674" y="486" text-anchor="middle" class="label" font-size="42">Living / Dining</text>
+  <text x="176" y="526" class="small" font-size="22">Front Door</text>
 </svg>
