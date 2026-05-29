@@ -715,10 +715,10 @@ textarea {
 .gallery-grid {
   display: grid;
   gap: 1.25rem;
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-left: auto;
   margin-right: auto;
-  max-width: 960px;
+  max-width: 1180px;
 }
 
 .gallery-button,
@@ -726,6 +726,12 @@ textarea {
 .card-photo-button {
   border-radius: var(--radius);
   overflow: hidden;
+}
+
+.gallery-button {
+  aspect-ratio: 4 / 3;
+  background: #0a0710;
+  box-shadow: 0 16px 38px rgba(20, 17, 32, 0.16);
 }
 
 .gallery-button:hover,
@@ -738,9 +744,11 @@ textarea {
 }
 
 .gallery-button img {
-  aspect-ratio: 16 / 10;
   background: #050505;
-  object-fit: contain;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--photo-position, center center);
   width: 100%;
 }
 
@@ -977,6 +985,7 @@ textarea {
   }
 
   .card-grid,
+  .gallery-grid,
   .list-columns,
   .property-link-grid,
   .neighborhood-grid {
@@ -1095,6 +1104,7 @@ textarea {
 
   .feature-list,
   .card-grid,
+  .gallery-grid,
   .list-columns,
   .property-link-grid,
   .neighborhood-grid,
