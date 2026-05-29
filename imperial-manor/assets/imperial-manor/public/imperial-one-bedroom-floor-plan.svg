@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 760" role="img" aria-labelledby="title desc">
+  <title id="title">Generic one-bedroom floor plan</title>
+  <desc id="desc">A generic one-bedroom, one-bath apartment floor plan diagram with living room, kitchen, bedroom, bathroom, closets, and entry.</desc>
+  <rect width="1100" height="760" fill="#fbf7ef"/>
+  <rect x="82" y="82" width="936" height="596" rx="12" fill="#fffdf9" stroke="#32124f" stroke-width="14"/>
+  <path d="M82 300h374v378M456 300h562M662 300v378M82 300V82M456 82v218M820 300v378" fill="none" stroke="#32124f" stroke-width="8"/>
+  <rect x="118" y="120" width="296" height="138" fill="#efe7d9" stroke="#d8af4f" stroke-width="4"/>
+  <rect x="118" y="340" width="296" height="296" fill="#f7f1e8" stroke="#d8af4f" stroke-width="4"/>
+  <rect x="496" y="340" width="126" height="210" fill="#efe7d9" stroke="#d8af4f" stroke-width="4"/>
+  <rect x="690" y="340" width="292" height="296" fill="#f7f1e8" stroke="#d8af4f" stroke-width="4"/>
+  <rect x="496" y="575" width="126" height="61" fill="#ffffff" stroke="#6f4a8e" stroke-width="4"/>
+  <rect x="848" y="120" width="134" height="138" fill="#ffffff" stroke="#6f4a8e" stroke-width="4"/>
+  <path d="M456 515q80 0 80 80M820 515q-80 0-80 80M456 210q80 0 80 80" fill="none" stroke="#6f4a8e" stroke-width="5"/>
+  <text x="266" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#32124f">Kitchen</text>
+  <text x="266" y="496" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#32124f">Living Room</text>
+  <text x="559" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#32124f">Bath</text>
+  <text x="836" y="496" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#32124f">Bedroom</text>
+  <text x="559" y="614" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#6f4a8e">Closet</text>
+  <text x="915" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#6f4a8e">Closet</text>
+  <text x="550" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#6f4a8e">One Bedroom | 1 + 1 | 850 SQ FT</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 760" role="img" aria-labelledby="title desc">
+  <title id="title">Generic two-bedroom floor plan</title>
+  <desc id="desc">A generic two-bedroom, one-bath apartment floor plan diagram with living room, dining area, kitchen, two bedrooms, bathroom, and closets.</desc>
+  <rect width="1100" height="760" fill="#fbf7ef"/>
+  <rect x="82" y="82" width="936" height="596" rx="12" fill="#fffdf9" stroke="#32124f" stroke-width="14"/>
+  <path d="M82 305h936M380 82v596M670 305v373M82 482h298M380 482h290M824 305v373" fill="none" stroke="#32124f" stroke-width="8"/>
+  <rect x="122" y="124" width="216" height="138" fill="#efe7d9" stroke="#d8af4f" stroke-width="4"/>
+  <rect x="122" y="342" width="216" height="100" fill="#ffffff" stroke="#6f4a8e" stroke-width="4"/>
+  <rect x="122" y="520" width="216" height="116" fill="#f7f1e8" stroke="#d8af4f" stroke-width="4"/>
+  <rect x="428" y="124" width="548" height="138" fill="#f7f1e8" stroke="#d8af4f" stroke-width="4"/>
+  <rect x="428" y="342" width="202" height="296" fill="#f7f1e8" stroke="#d8af4f" stroke-width="4"/>
+  <rect x="712" y="342" width="264" height="296" fill="#f7f1e8" stroke="#d8af4f" stroke-width="4"/>
+  <rect x="428" y="520" width="202" height="60" fill="#ffffff" stroke="#6f4a8e" stroke-width="4"/>
+  <rect x="860" y="342" width="116" height="60" fill="#ffffff" stroke="#6f4a8e" stroke-width="4"/>
+  <path d="M380 218q84 0 84 84M380 420q84 0 84 84M670 420q-84 0-84 84M824 420q-84 0-84 84" fill="none" stroke="#6f4a8e" stroke-width="5"/>
+  <text x="230" y="202" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#32124f">Kitchen</text>
+  <text x="230" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#32124f">Bath</text>
+  <text x="230" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#32124f">Dining</text>
+  <text x="702" y="202" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#32124f">Living Room</text>
+  <text x="529" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#32124f">Bedroom 1</text>
+  <text x="844" y="512" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#32124f">Bedroom 2</text>
+  <text x="529" y="558" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#6f4a8e">Closet</text>
+  <text x="918" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#6f4a8e">Closet</text>
+  <text x="550" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#6f4a8e">Two Bedroom | 2 + 1 | 1200 SQ FT</text>
+</svg>

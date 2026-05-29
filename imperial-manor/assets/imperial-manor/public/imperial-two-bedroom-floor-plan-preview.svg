@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">Generic two-bedroom floor plan preview</title>
+  <desc id="desc">A simplified two-bedroom, one-bath apartment floor plan diagram.</desc>
+  <rect width="900" height="620" fill="#fbf7ef"/>
+  <rect x="70" y="70" width="760" height="480" rx="10" fill="#ffffff" stroke="#32124f" stroke-width="12"/>
+  <path d="M70 250h760M330 70v480M570 250v300M70 410h260" fill="none" stroke="#32124f" stroke-width="8"/>
+  <rect x="98" y="105" width="195" height="110" fill="#efe7d9" stroke="#d8af4f" stroke-width="4"/>
+  <rect x="98" y="285" width="195" height="95" fill="#ffffff" stroke="#6f4a8e" stroke-width="4"/>
+  <rect x="98" y="438" width="195" height="77" fill="#f6f0e7" stroke="#d8af4f" stroke-width="4"/>
+  <rect x="365" y="105" width="430" height="110" fill="#f6f0e7" stroke="#d8af4f" stroke-width="4"/>
+  <rect x="365" y="285" width="165" height="230" fill="#efe7d9" stroke="#d8af4f" stroke-width="4"/>
+  <rect x="610" y="285" width="185" height="230" fill="#f6f0e7" stroke="#d8af4f" stroke-width="4"/>
+  <text x="195" y="166" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#32124f">Kitchen</text>
+  <text x="195" y="342" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#32124f">Bath</text>
+  <text x="195" y="486" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#32124f">Dining</text>
+  <text x="580" y="166" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#32124f">Living</text>
+  <text x="448" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#32124f">Bed 1</text>
+  <text x="702" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#32124f">Bed 2</text>
+  <text x="450" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#6f4a8e">2 + 1 | 1200 SQ FT</text>
+</svg>
