@@ -388,7 +388,7 @@ textarea {
 }
 
 .floor-preview-section.has-background::before {
-  background: linear-gradient(90deg, rgba(50, 18, 79, 0.34), rgba(50, 18, 79, 0.14));
+  background: linear-gradient(90deg, rgba(32, 26, 36, 0.16), rgba(32, 26, 36, 0.04));
   content: "";
   inset: 0;
   pointer-events: none;
@@ -744,10 +744,10 @@ textarea {
 }
 
 .gallery-button img {
-  background: #050505;
+  background: #f7f2ea;
   display: block;
   height: 100%;
-  object-fit: cover;
+  object-fit: var(--photo-fit, cover);
   object-position: var(--photo-position, center center);
   width: 100%;
 }
