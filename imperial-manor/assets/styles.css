@@ -244,7 +244,7 @@ textarea {
 
 .hero {
   color: #fff;
-  min-height: min(620px, calc(100svh - 190px));
+  min-height: var(--hero-min-height, min(620px, calc(100svh - 190px)));
   overflow: hidden;
   position: relative;
 }
@@ -270,27 +270,27 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: min(620px, calc(100svh - 190px));
-  padding-bottom: clamp(2rem, 6vh, 4rem);
-  padding-top: clamp(2rem, 6vh, 4rem);
+  min-height: var(--hero-min-height, min(620px, calc(100svh - 190px)));
+  padding-bottom: var(--hero-padding-y, clamp(2rem, 6vh, 4rem));
+  padding-top: var(--hero-padding-y, clamp(2rem, 6vh, 4rem));
   position: relative;
   z-index: 2;
 }
 
 .hero.has-logo .hero-content {
   display: grid;
-  gap: clamp(2rem, 5vw, 4rem);
+  gap: var(--hero-logo-gap, clamp(2rem, 5vw, 4rem));
   grid-template-columns: minmax(180px, 320px) minmax(0, 760px);
 }
 
 .hero.has-logo,
 .hero.has-logo .hero-content {
-  min-height: min(560px, calc(100svh - 220px));
+  min-height: var(--hero-logo-min-height, min(560px, calc(100svh - 220px)));
 }
 
 .hero-copy {
   display: grid;
-  gap: 1rem;
+  gap: var(--hero-copy-gap, 1rem);
 }
 
 .hero-copy .eyebrow,
@@ -300,7 +300,7 @@ textarea {
 
 .hero-logo {
   display: block;
-  max-height: clamp(300px, 43svh, 410px);
+  max-height: var(--hero-logo-max-height, clamp(300px, 43svh, 410px));
   max-width: min(480px, 88vw);
   object-fit: contain;
   width: auto;
@@ -350,7 +350,7 @@ textarea {
 .card-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: var(--action-gap, 0.75rem);
 }
 
 .hero .button.secondary {
@@ -452,12 +452,13 @@ textarea {
 
 .section-heading h2 {
   font-size: clamp(2rem, 5vw, 3.4rem);
-  margin-top: 0.45rem;
+  margin-top: var(--heading-kicker-gap, 0.45rem);
 }
 
 .section-heading p {
   color: var(--color-muted);
   font-size: 1.05rem;
+  margin: var(--section-text-margin, 1rem 0);
 }
 
 .media {
@@ -505,11 +506,12 @@ textarea {
 .lifestyle-copy h2 {
   font-size: clamp(1.55rem, 3vw, 2.3rem);
   line-height: 1.08;
-  margin: 0.4rem 0 0.75rem;
+  margin: var(--card-heading-margin, 0.4rem 0 0.75rem);
 }
 
 .lifestyle-copy p {
   color: var(--color-muted);
+  margin: var(--card-text-margin, 1rem 0);
 }
 
 .feature-strip {
@@ -534,8 +536,8 @@ textarea {
   display: flex;
   font-weight: 800;
   gap: 0.7rem;
-  min-height: 74px;
-  padding: 1rem;
+  min-height: var(--feature-item-min-height, 74px);
+  padding: var(--feature-item-padding, 1rem);
 }
 
 .feature-list li::before {
@@ -659,18 +661,19 @@ textarea {
 .card h3 {
   font-size: 1.35rem;
   line-height: 1.2;
-  margin: 0 0 0.45rem;
+  margin: var(--card-title-margin, 0 0 0.45rem);
 }
 
 .meta {
   color: var(--color-muted);
-  margin: 0 0 0.9rem;
+  margin: var(--meta-margin, 0 0 0.9rem);
 }
 
 .price {
   color: var(--color-primary);
   font-size: 1.05rem;
   font-weight: 800;
+  margin: var(--price-margin, 1rem 0);
 }
 
 .availability {
@@ -1054,22 +1057,22 @@ textarea {
 
   .hero,
   .hero-content {
-    min-height: 520px;
+    min-height: var(--hero-min-height-mobile, 520px);
   }
 
   .hero-content {
-    padding-bottom: 1.5rem;
-    padding-top: 1.5rem;
+    padding-bottom: var(--hero-padding-y-mobile, 1.5rem);
+    padding-top: var(--hero-padding-y-mobile, 1.5rem);
   }
 
   .hero.has-logo .hero-content {
     display: flex;
-    gap: 0.65rem;
+    gap: var(--hero-logo-gap-mobile, 0.65rem);
   }
 
   .hero.has-logo,
   .hero.has-logo .hero-content {
-    min-height: 520px;
+    min-height: var(--hero-logo-min-height-mobile, 520px);
   }
 
   .hero h1 {
@@ -1089,7 +1092,7 @@ textarea {
   }
 
   .hero-logo {
-    max-height: 240px;
+    max-height: var(--hero-logo-max-height-mobile, 240px);
     max-width: 78vw;
   }
 
