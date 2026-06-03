@@ -367,7 +367,7 @@ textarea {
 }
 
 .section {
-  padding: 5rem 0;
+  padding: var(--section-padding-y, 5rem) 0;
 }
 
 .section.alt {
@@ -388,7 +388,7 @@ textarea {
 }
 
 .floor-preview-section.has-background::before {
-  background: linear-gradient(90deg, rgba(50, 18, 79, 0.34), rgba(50, 18, 79, 0.14));
+  background: linear-gradient(90deg, rgba(32, 26, 36, 0.16), rgba(32, 26, 36, 0.04));
   content: "";
   inset: 0;
   pointer-events: none;
@@ -434,7 +434,7 @@ textarea {
 .split {
   align-items: center;
   display: grid;
-  gap: 3rem;
+  gap: var(--split-gap, 3rem);
   grid-template-columns: minmax(0, 1fr) minmax(300px, 0.9fr);
 }
 
@@ -486,7 +486,7 @@ textarea {
 
 .lifestyle-grid {
   display: grid;
-  gap: 1.5rem;
+  gap: var(--content-gap, 1.5rem);
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
@@ -499,7 +499,7 @@ textarea {
 }
 
 .lifestyle-copy {
-  padding: 1.35rem;
+  padding: var(--panel-padding, 1.35rem);
 }
 
 .lifestyle-copy h2 {
@@ -515,12 +515,12 @@ textarea {
 .feature-strip {
   background: var(--color-primary);
   color: #fff;
-  padding: 2rem 0;
+  padding: var(--feature-strip-padding-y, 2rem) 0;
 }
 
 .feature-list {
   display: grid;
-  gap: 1rem;
+  gap: var(--grid-gap, 1rem);
   grid-template-columns: repeat(3, minmax(0, 1fr));
   list-style: none;
   margin: 0;
@@ -553,7 +553,7 @@ textarea {
 
 .property-link-grid {
   display: grid;
-  gap: 1rem;
+  gap: var(--grid-gap, 1rem);
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
@@ -565,7 +565,7 @@ textarea {
   flex-direction: column;
   gap: 0.65rem;
   min-height: 100%;
-  padding: 1.25rem;
+  padding: var(--card-padding, 1.25rem);
 }
 
 .property-link-card h3 {
@@ -587,7 +587,7 @@ textarea {
 .page-hero {
   background: var(--color-primary);
   color: #fff;
-  padding: 5rem 0;
+  padding: var(--page-hero-padding-y, 5rem) 0;
 }
 
 .page-hero h1 {
@@ -604,7 +604,7 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
-  margin: 2rem 0;
+  margin: var(--filters-margin-y, 2rem) 0;
 }
 
 .filter-button {
@@ -627,7 +627,7 @@ textarea {
 
 .card-grid {
   display: grid;
-  gap: 1.25rem;
+  gap: var(--grid-gap, 1.25rem);
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
@@ -652,7 +652,7 @@ textarea {
 }
 
 .card-body {
-  padding: 1.25rem;
+  padding: var(--card-padding, 1.25rem);
 }
 
 .card h2,
@@ -680,7 +680,7 @@ textarea {
 
 .list-columns {
   display: grid;
-  gap: 1.25rem;
+  gap: var(--grid-gap, 1.25rem);
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
@@ -688,7 +688,7 @@ textarea {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
-  padding: 1.35rem;
+  padding: var(--panel-padding, 1.35rem);
 }
 
 .list-panel h2 {
@@ -714,7 +714,7 @@ textarea {
 
 .gallery-grid {
   display: grid;
-  gap: 1.25rem;
+  gap: var(--gallery-gap, var(--grid-gap, 1.25rem));
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-left: auto;
   margin-right: auto;
@@ -744,10 +744,10 @@ textarea {
 }
 
 .gallery-button img {
-  background: #050505;
+  background: #f7f2ea;
   display: block;
   height: 100%;
-  object-fit: cover;
+  object-fit: var(--photo-fit, cover);
   object-position: var(--photo-position, center center);
   width: 100%;
 }
@@ -1099,7 +1099,7 @@ textarea {
   }
 
   .section {
-    padding: 3.5rem 0;
+    padding: var(--section-padding-y-mobile, 3.5rem) 0;
   }
 
   .feature-list,
