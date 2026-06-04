@@ -299,7 +299,7 @@ textarea {
 }
 
 .hero-copy .eyebrow {
-  color: #fff;
+  color: var(--hero-eyebrow-color, var(--color-secondary));
 }
 
 .hero-logo {
@@ -421,7 +421,7 @@ textarea {
 }
 
 .floor-preview-section.has-background .kicker {
-  color: #fff;
+  color: var(--floor-preview-kicker-color, var(--color-secondary));
 }
 
 .section-bg-photo-button {
