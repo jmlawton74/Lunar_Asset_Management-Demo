@@ -1,10 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" role="img" aria-labelledby="title desc">
-  <title id="title">Red Oak leaf emblem</title>
-  <desc id="desc">A bold burgundy oak leaf centered inside a forest green circle on a warm neutral field.</desc>
-  <rect width="720" height="720" rx="58" fill="#F6EDE1"/>
-  <circle cx="360" cy="360" r="272" fill="#FFFDF9" stroke="#3F5F3E" stroke-width="28"/>
-  <circle cx="360" cy="360" r="232" fill="#F6EDE1" stroke="#6F2B28" stroke-width="10" opacity="0.92"/>
-  <path fill="#6F2B28" d="M360 122c-30 42-48 84-54 127-36-26-77-36-122-30 4 48 25 86 61 114-50 8-91 30-123 66 29 42 70 65 122 66-25 42-32 87-20 136 50-9 91-33 121-75 3 54 21 101 54 141 33-40 51-87 54-141 30 42 71 66 121 75 12-49 5-94-20-136 52-1 93-24 122-66-32-36-73-58-123-66 36-28 57-66 61-114-45-6-86 4-122 30-6-43-24-85-54-127-27 31-45 64-54 100-9-36-27-69-54-100Z"/>
-  <path fill="none" stroke="#FFFDF9" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" d="M360 218v328M360 326c-51-29-96-68-134-117M360 342c52-25 99-61 141-109M360 430c-43-16-84-41-123-76M360 448c42-14 83-37 122-70"/>
-  <path fill="#3F5F3E" d="M211 566c89-26 209-26 298 0 21 6 36 25 36 47H175c0-22 15-41 36-47Z"/>
+  <title id="title">Red Oak Apartment Homes logo</title>
+  <desc id="desc">A professional Red Oak Apartment Homes logo with a recognizable oak leaf silhouette, earthy burgundy, bark tan, forest green, and charcoal.</desc>
+  <rect width="720" height="720" rx="52" fill="#F6EDE1"/>
+  <circle cx="360" cy="226" r="154" fill="none" stroke="#3F5F3E" stroke-width="18"/>
+  <g transform="translate(360 226)">
+    <path fill="#6F2B28" d="M0-144c-21 28-35 57-39 87-25-18-53-25-84-21 3 33 17 59 42 78-34 5-62 20-85 45 20 29 48 44 84 45-17 29-22 60-14 94 35-6 63-23 84-52 2 37 12 70 31 98 24-25 38-57 43-94 28 21 60 30 96 27 0-34-10-64-32-89 35-8 61-27 79-58-27-21-58-31-93-28 13-29 15-59 6-91-31 6-58 20-80 42-5-29-18-57-38-83Z"/>
+    <path fill="none" stroke="#F6EDE1" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" d="M0-76v260M0 42c-38-24-71-53-98-88M0 56c36-18 70-44 103-78M0 128c-30-10-60-28-91-54M0 142c30-8 59-24 88-48"/>
+    <path fill="#3F5F3E" d="M-118 176c70-18 166-18 236 0 13 3 22 15 22 29h-280c0-14 9-26 22-29Z"/>
+  </g>
+  <text x="360" y="516" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="94" font-weight="700" fill="#6F2B28">RED OAK</text>
+  <line x1="154" y1="556" x2="282" y2="556" stroke="#3F5F3E" stroke-width="10" stroke-linecap="round"/>
+  <line x1="438" y1="556" x2="566" y2="556" stroke="#3F5F3E" stroke-width="10" stroke-linecap="round"/>
+  <text x="360" y="602" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="39" font-weight="700" fill="#2B2B29">Apartment Homes</text>
 </svg>
