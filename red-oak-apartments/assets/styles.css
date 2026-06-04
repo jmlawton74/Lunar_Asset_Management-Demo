@@ -170,12 +170,13 @@ textarea {
 }
 
 .brand-logo {
-  background: var(--color-primary);
+  background: var(--logo-bg, var(--color-paper));
   border-radius: var(--radius);
-  height: 88px;
-  object-fit: cover;
+  height: var(--header-logo-height, 88px);
+  object-fit: contain;
   object-position: center;
-  width: 88px;
+  padding: var(--header-logo-padding, 0);
+  width: var(--header-logo-width, 88px);
 }
 
 .brand-text {
@@ -285,7 +286,7 @@ textarea {
 .hero.has-logo .hero-content {
   display: grid;
   gap: var(--hero-logo-gap, clamp(2rem, 5vw, 4rem));
-  grid-template-columns: minmax(180px, 320px) minmax(0, 760px);
+  grid-template-columns: var(--hero-logo-column, minmax(180px, 320px)) minmax(0, 760px);
 }
 
 .hero.has-logo,
@@ -983,8 +984,8 @@ textarea {
   }
 
   .brand-logo {
-    height: 76px;
-    width: 76px;
+    height: var(--header-logo-tablet-height, 76px);
+    width: var(--header-logo-tablet-width, 76px);
   }
 
   .split,
@@ -1041,8 +1042,8 @@ textarea {
   }
 
   .brand-logo {
-    height: 68px;
-    width: 68px;
+    height: var(--header-logo-mobile-height, 68px);
+    width: var(--header-logo-mobile-width, 68px);
   }
 
   .nav-toggle {
