@@ -298,6 +298,10 @@ textarea {
   margin: 0;
 }
 
+.hero-copy .eyebrow {
+  color: #fff;
+}
+
 .hero-logo {
   display: block;
   max-height: var(--hero-logo-max-height, clamp(300px, 43svh, 410px));
@@ -417,7 +421,7 @@ textarea {
 }
 
 .floor-preview-section.has-background .kicker {
-  color: var(--color-secondary);
+  color: #fff;
 }
 
 .section-bg-photo-button {
