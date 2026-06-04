@@ -26,6 +26,7 @@ body {
   color: var(--color-ink);
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 img {
@@ -164,6 +165,7 @@ textarea {
   display: flex;
   gap: 0.75rem;
   line-height: 1.1;
+  min-width: 0;
   text-decoration: none;
 }
 
@@ -178,12 +180,14 @@ textarea {
 
 .brand-text {
   display: grid;
+  min-width: 0;
 }
 
 .brand-name {
   color: var(--color-primary);
   font-size: 1.22rem;
   font-weight: 800;
+  overflow-wrap: anywhere;
 }
 
 .brand.no-header-logo .brand-name {
@@ -240,6 +244,7 @@ textarea {
 .header-actions {
   display: flex;
   gap: 0.65rem;
+  min-width: 0;
 }
 
 .hero {
@@ -291,6 +296,7 @@ textarea {
 .hero-copy {
   display: grid;
   gap: var(--hero-copy-gap, 1rem);
+  min-width: 0;
 }
 
 .hero-copy .eyebrow,
@@ -338,6 +344,7 @@ textarea {
 .hero h1 {
   font-size: clamp(3.1rem, 8vw, 5.8rem);
   max-width: 820px;
+  overflow-wrap: anywhere;
 }
 
 .hero.has-logo h1 {
@@ -347,6 +354,7 @@ textarea {
 .hero p {
   font-size: 1.2rem;
   max-width: 620px;
+  overflow-wrap: anywhere;
 }
 
 .hero-actions,
@@ -1051,12 +1059,15 @@ textarea {
     gap: 0.6rem;
     grid-column: 1 / -1;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 100%;
+    width: 100%;
     order: initial;
   }
 
   .header-actions .button {
     min-height: 46px;
     padding: 0.62rem 0.7rem;
+    width: 100%;
   }
 
   .hero,
@@ -1067,6 +1078,7 @@ textarea {
   .hero-content {
     padding-bottom: var(--hero-padding-y-mobile, 1.5rem);
     padding-top: var(--hero-padding-y-mobile, 1.5rem);
+    min-width: 0;
   }
 
   .hero.has-logo .hero-content {
@@ -1080,11 +1092,11 @@ textarea {
   }
 
   .hero h1 {
-    font-size: 3rem;
+    font-size: clamp(2.35rem, 12vw, 3rem);
   }
 
   .hero.has-logo h1 {
-    font-size: 2.05rem;
+    font-size: clamp(1.8rem, 9vw, 2.05rem);
   }
 
   .hero p {
@@ -1093,6 +1105,7 @@ textarea {
 
   .hero-copy {
     gap: 0.65rem;
+    max-width: 100%;
   }
 
   .hero-logo {
