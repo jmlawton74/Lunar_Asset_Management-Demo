@@ -1107,6 +1107,14 @@ textarea {
   .hero-copy {
     gap: 0.65rem;
     max-width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    width: 100%;
+  }
+
+  .hero-copy p,
+  .hero-copy h1 {
+    max-width: 100%;
   }
 
   .hero-logo {
