@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Redirecting | Lunar Asset Management</title>
+  <script>
+    (function () {
+      var repoBase = "/Lunar_Asset_Management-Demo/";
+      var repoBaseLower = repoBase.toLowerCase();
+      var path = window.location.pathname;
+      var lower = path.toLowerCase();
+      var redOakPaths = [
+        repoBaseLower + "red-oak",
+        repoBaseLower + "red-oak/",
+        repoBaseLower + "red-oak-apartment",
+        repoBaseLower + "red-oak-apartment/",
+        repoBaseLower + "red-oak-apartments",
+        repoBaseLower + "red-oak-apartments/",
+        repoBaseLower + "red-oak-apartment-homes",
+        repoBaseLower + "red-oak-apartment-homes/"
+      ];
+
+      if (redOakPaths.indexOf(lower) !== -1) {
+        window.location.replace(repoBase + "red-oak-apartments/" + window.location.search + window.location.hash);
+      }
+    })();
+  </script>
+  <style>
+    body {
+      align-items: center;
+      background: #f6f3ec;
+      color: #18221f;
+      display: flex;
+      font-family: Arial, Helvetica, sans-serif;
+      justify-content: center;
+      line-height: 1.5;
+      margin: 0;
+      min-height: 100vh;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    a {
+      color: #275142;
+      font-weight: 800;
+      text-underline-offset: 0.25em;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Page Not Found</h1>
+    <p>The Red Oak Apartments page is available at <a href="/Lunar_Asset_Management-Demo/red-oak-apartments/">/red-oak-apartments/</a>.</p>
+    <p><a href="/Lunar_Asset_Management-Demo/">Return to the portfolio index</a></p>
+  </main>
+</body>
+</html>
