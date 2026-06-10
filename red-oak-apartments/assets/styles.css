@@ -921,8 +921,8 @@ body.site-red-oak-apartments {
 
 .site-red-oak-apartments .hero::after {
   background:
-    linear-gradient(0deg, rgba(36, 31, 28, 0.38), rgba(36, 31, 28, 0) 52%),
-    linear-gradient(90deg, rgba(111, 37, 35, 0.18), rgba(63, 95, 62, 0.08));
+    linear-gradient(0deg, rgba(36, 31, 28, 0.08), rgba(36, 31, 28, 0) 56%),
+    linear-gradient(90deg, rgba(111, 37, 35, 0.03), rgba(63, 95, 62, 0));
   content: "";
   inset: 0;
   pointer-events: none;
@@ -931,7 +931,12 @@ body.site-red-oak-apartments {
 }
 
 .site-red-oak-apartments .hero > img {
-  filter: saturate(1.05) contrast(1.06);
+  filter: brightness(1.2) saturate(1.12) contrast(1.03);
+}
+
+.site-red-oak-apartments .media-button img,
+.site-red-oak-apartments .gallery-button img {
+  filter: brightness(1.12) saturate(1.12) contrast(1.02);
 }
 
 .site-red-oak-apartments .hero.has-logo .hero-content {
@@ -948,6 +953,7 @@ body.site-red-oak-apartments {
 .site-red-oak-apartments .hero-copy {
   border-left: 4px solid #c09353;
   padding-left: clamp(1.25rem, 2.6vw, 2rem);
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.62);
 }
 
 .site-red-oak-apartments .hero h1,
@@ -1296,13 +1302,19 @@ body.site-red-oak-apartments {
     grid-column: 1 / -1;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     max-width: 100%;
+    min-width: 0;
     width: 100%;
     order: initial;
   }
 
   .header-actions .button {
+    line-height: 1.15;
     min-height: 46px;
+    min-width: 0;
+    overflow-wrap: break-word;
     padding: 0.62rem 0.7rem;
+    text-align: center;
+    white-space: normal;
     width: 100%;
   }
 
@@ -1443,5 +1455,11 @@ body.site-red-oak-apartments {
 
   .site-red-oak-apartments .hero-logo {
     width: min(230px, 78vw);
+  }
+}
+
+@media (max-width: 640px) {
+  .site-red-oak-apartments .header-actions {
+    grid-template-columns: 1fr;
   }
 }
