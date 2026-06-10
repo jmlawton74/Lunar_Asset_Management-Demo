@@ -861,16 +861,32 @@ body.site-red-oak-apartments {
 }
 
 .site-red-oak-apartments .brand {
-  flex: 0 0 auto;
+  flex: 0 1 340px;
+  gap: 0.85rem;
 }
 
 .site-red-oak-apartments .brand-logo {
   background: transparent;
+  flex: 0 0 auto;
   filter: drop-shadow(0 10px 18px rgba(49, 35, 27, 0.13));
 }
 
 .site-red-oak-apartments .brand-text {
-  display: none;
+  display: grid;
+}
+
+.site-red-oak-apartments .brand-name {
+  color: #241f1c;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.08rem, 1.8vw, 1.34rem);
+  font-weight: 800;
+  line-height: 1.06;
+}
+
+.site-red-oak-apartments .brand-location {
+  color: #5e5750;
+  font-size: 0.92rem;
+  font-weight: 600;
 }
 
 .site-red-oak-apartments .nav-list {
@@ -944,10 +960,15 @@ body.site-red-oak-apartments {
 }
 
 .site-red-oak-apartments .hero-logo {
+  background: rgba(255, 252, 247, 0.94);
+  border: 2px solid rgba(192, 147, 83, 0.72);
+  border-radius: 999px;
   filter:
     drop-shadow(0 1px 1px rgba(255, 252, 247, 0.64))
     drop-shadow(0 18px 34px rgba(0, 0, 0, 0.48));
-  width: min(360px, 84vw);
+  max-height: none;
+  padding: clamp(0.65rem, 1.4vw, 0.9rem);
+  width: min(176px, 26vw);
 }
 
 .site-red-oak-apartments .hero-copy {
@@ -994,6 +1015,16 @@ body.site-red-oak-apartments {
 .site-red-oak-apartments .kicker,
 .site-red-oak-apartments .eyebrow {
   color: #6f2523;
+}
+
+.site-red-oak-apartments .hero .eyebrow {
+  align-self: start;
+  background: rgba(36, 31, 28, 0.86);
+  border-radius: 4px;
+  color: #fff;
+  line-height: 1.25;
+  padding: 0.35rem 0.55rem;
+  text-shadow: none;
 }
 
 .site-red-oak-apartments .media,
@@ -1445,6 +1476,12 @@ body.site-red-oak-apartments {
     padding-top: 1rem;
   }
 
+  .site-red-oak-apartments .hero p {
+    font-size: clamp(1rem, 4.8vw, 1.08rem);
+    line-height: 1.45;
+    max-width: 32ch;
+  }
+
   .site-red-oak-apartments .hero.has-logo h1 {
     font-size: clamp(2.1rem, 10vw, 3rem);
   }
@@ -1454,7 +1491,7 @@ body.site-red-oak-apartments {
   }
 
   .site-red-oak-apartments .hero-logo {
-    width: min(230px, 78vw);
+    width: min(118px, 36vw);
   }
 }
 
