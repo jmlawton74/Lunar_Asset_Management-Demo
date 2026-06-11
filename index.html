@@ -6,8 +6,8 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <title>Lunar Asset Management | Internal Portfolio Hub</title>
-  <meta name="description" content="Internal management dashboard for reviewing Lunar Asset Management property website demos, status, operational links, representative content, and digital portfolio organization.">
+  <title>Lunar Asset Management Portfolio</title>
+  <meta name="description" content="Property website demos and portfolio review links for Lunar Asset Management.">
   <style>
     :root {
       --ink: #202320;
@@ -24,7 +24,7 @@
       --gold: #b98745;
       --blue: #23525b;
       --purple: #3a2458;
-      --shadow: 0 18px 54px rgba(27, 25, 23, 0.12);
+      --shadow: 0 16px 44px rgba(27, 25, 23, 0.1);
     }
 
     * { box-sizing: border-box; }
@@ -118,11 +118,11 @@
 
     .hero {
       background:
-        linear-gradient(110deg, rgba(23, 37, 31, 0.96), rgba(77, 37, 34, 0.93)),
-        radial-gradient(circle at 85% 22%, rgba(185, 135, 69, 0.34), transparent 34%);
+        linear-gradient(110deg, rgba(23, 37, 31, 0.97), rgba(77, 37, 34, 0.92)),
+        radial-gradient(circle at 86% 28%, rgba(185, 135, 69, 0.22), transparent 34%);
       color: #fff;
       overflow: hidden;
-      padding: clamp(3.5rem, 6vw, 5.4rem) clamp(1rem, 5vw, 4.5rem);
+      padding: clamp(2.6rem, 5vw, 4.2rem) clamp(1rem, 5vw, 4.5rem);
       position: relative;
     }
 
@@ -133,24 +133,21 @@
       background-size: 74px 74px;
       content: "";
       inset: 0;
-      opacity: 0.22;
+      opacity: 0.1;
       position: absolute;
     }
 
     .hero-tree {
-      bottom: -42px;
+      bottom: -68px;
       filter: brightness(0) invert(1);
-      max-width: 430px;
-      opacity: 0.12;
+      max-width: 360px;
+      opacity: 0.08;
       position: absolute;
       right: clamp(0.5rem, 7vw, 6rem);
-      width: 34vw;
+      width: 28vw;
     }
 
     .hero-inner {
-      display: grid;
-      gap: clamp(1.5rem, 4vw, 3rem);
-      grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.75fr);
       margin: 0 auto;
       max-width: 1180px;
       position: relative;
@@ -168,17 +165,17 @@
 
     h1 {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2.8rem, 6.5vw, 5.9rem);
-      line-height: 0.98;
+      font-size: clamp(2.4rem, 5vw, 4.4rem);
+      line-height: 1.02;
       margin: 0;
-      max-width: 880px;
+      max-width: 920px;
     }
 
     .hero-copy {
       color: rgba(255, 255, 255, 0.9);
-      font-size: clamp(1.05rem, 1.8vw, 1.28rem);
-      margin: 1.15rem 0 0;
-      max-width: 790px;
+      font-size: clamp(1rem, 1.7vw, 1.2rem);
+      margin: 0.8rem 0 0;
+      max-width: 620px;
     }
 
     .hero-actions {
@@ -277,7 +274,7 @@
     }
 
     .dashboard {
-      padding: clamp(2.8rem, 5vw, 4.5rem) clamp(1rem, 5vw, 4.5rem);
+      padding: clamp(2.4rem, 5vw, 4rem) clamp(1rem, 5vw, 4.5rem);
     }
 
     .section-inner {
@@ -286,16 +283,14 @@
     }
 
     .section-heading {
-      display: grid;
-      gap: 1rem;
-      grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
-      margin-bottom: 1.35rem;
+      margin-bottom: 1.3rem;
+      max-width: 780px;
     }
 
     .section-heading h2 {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2rem, 4vw, 3.7rem);
-      line-height: 1.04;
+      font-size: clamp(1.8rem, 3.4vw, 2.8rem);
+      line-height: 1.08;
       margin: 0;
     }
 
@@ -348,7 +343,7 @@
       box-shadow: var(--shadow);
       display: flex;
       flex-direction: column;
-      grid-column: span 3;
+      grid-column: span 2;
       min-height: 100%;
       overflow: hidden;
     }
@@ -384,14 +379,14 @@
       background:
         radial-gradient(circle at 50% 23%, rgba(255, 253, 248, 0.94), rgba(255, 253, 248, 0.42) 42%, transparent 68%),
         linear-gradient(145deg, #4d2522, #7a3932 58%, #263f35);
-      min-height: 230px;
+      min-height: 174px;
     }
 
     .site-imperial-manor .card-visual {
       background:
         radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.95), rgba(216, 175, 79, 0.2) 48%, transparent 72%),
         linear-gradient(145deg, #32124f, #6f4a8e 58%, #d8af4f);
-      min-height: 230px;
+      min-height: 174px;
     }
 
     .card-logo {
@@ -404,15 +399,15 @@
 
     .site-red-oak-apartments .card-logo {
       filter: drop-shadow(0 18px 30px rgba(24, 16, 14, 0.28));
-      height: 182px;
-      max-width: 330px;
+      height: 128px;
+      max-width: 285px;
     }
 
     .site-imperial-manor .card-logo {
       border-radius: 8px;
       box-shadow: 0 18px 40px rgba(25, 12, 36, 0.22);
-      height: 178px;
-      max-width: 290px;
+      height: 128px;
+      max-width: 230px;
     }
 
     .card-monogram {
@@ -434,7 +429,7 @@
       display: flex;
       flex: 1;
       flex-direction: column;
-      gap: 0.9rem;
+      gap: 0.75rem;
       padding: 1.1rem;
     }
 
@@ -496,6 +491,20 @@
     .summary {
       color: var(--muted);
       margin: 0;
+    }
+
+    .card-meta {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      display: grid;
+      gap: 0.25rem;
+      font-size: 0.9rem;
+      margin-top: 0.15rem;
+      padding-top: 0.75rem;
+    }
+
+    .card-meta strong {
+      color: var(--charcoal);
     }
 
     .detail-list {
@@ -661,51 +670,27 @@
   <header class="hub-header">
     <a class="brand" href="https://jmlawton74.github.io/Lunar_Asset_Management-Demo/" aria-label="Lunar Asset Management internal portfolio hub">
       <span class="brand-mark">LAM</span>
-      <span><strong>Lunar Asset Management</strong><span>Internal Portfolio Access Hub</span></span>
+      <span><strong>Lunar Asset Management</strong><span>Website Portfolio</span></span>
     </a>
     <nav class="header-nav" aria-label="Portfolio hub navigation">
-      <a href="#portfolio">Portfolio Review</a>
-      <a href="#standards">Review Standards</a>
+      <a href="#portfolio">Portfolio</a>
     </nav>
   </header>
   <main>
     <section class="hero">
       <img class="hero-tree" src="red-oak-apartments/assets/red-oak/red-oak-tree-mark-20260610.svg" alt="" aria-hidden="true">
       <div class="hero-inner">
-        <div>
-          <p class="eyebrow">Internal management dashboard</p>
-          <h1>Digital portfolio visibility for Lunar Asset Management leadership.</h1>
-          <p class="hero-copy">This hub is a company-facing review point for property website demos, brand direction, operational link setup, representative content, and portfolio organization across Lunar Asset Management.</p>
-          <div class="hero-actions">
-            <a class="button" href="#portfolio">Review Property Websites</a>
-            <a class="button ghost" href="https://jmlawton74.github.io/Lunar_Asset_Management-Demo/red-oak-apartments/">Open Red Oak Demo</a>
-          </div>
-        </div>
-        <aside class="brief-panel" aria-label="Management brief">
-          <h2>Current hub scope</h2>
-          <dl class="brief-list">
-            <div class="brief-row"><dt>Audience</dt><dd>Internal leadership and portfolio review only.</dd></div>
-            <div class="brief-row"><dt>Hosting</dt><dd>GitHub Pages demo path for management visibility.</dd></div>
-            <div class="brief-row"><dt>Content control</dt><dd>Representative, placeholder, sample, and proof-of-concept items are labeled.</dd></div>
-            <div class="brief-row"><dt>Operations</dt><dd>Leasing and resident access pathways are summarized per property.</dd></div>
-          </dl>
-        </aside>
+        <p class="eyebrow">Portfolio review</p>
+        <h1>Lunar Asset Management Portfolio</h1>
+        <p class="hero-copy">Property website demos and portfolio review links.</p>
       </div>
     </section>
     <section class="dashboard" id="portfolio" aria-labelledby="portfolio-heading">
       <div class="section-inner">
         <div class="section-heading">
-          <div>
-            <p class="eyebrow">Portfolio review</p>
-            <h2 id="portfolio-heading">Website access, readiness status, and operational setup.</h2>
-          </div>
-          <p>Each entry identifies the property website, location, demo status, branding direction, leasing-link setup, resident-portal setup, and any representative or placeholder content without inventing pricing, availability, amenities, or unconfirmed facts.</p>
-        </div>
-        <div class="metrics" aria-label="Portfolio hub metrics">
-          <div class="metric"><strong>6</strong><span>property website entries</span></div>
-          <div class="metric"><strong>4</strong><span>build-managed demo sites</span></div>
-          <div class="metric"><strong>2</strong><span>protected reference entries</span></div>
-          <div class="metric"><strong>8</strong><span>property-specific link sets</span></div>
+          <p class="eyebrow">Property websites</p>
+          <h2 id="portfolio-heading">Portfolio access</h2>
+          <p>Open each property site for review. Status labels identify demo, representative, and proof-of-concept content.</p>
         </div>
         <div class="property-grid">
 
@@ -719,18 +704,13 @@
                   <span class="location-label">Richmond, VA</span>
                   <h3>Red Oak Apartments</h3>
                 </div>
-                <span class="status-badge red-oak">Active demo</span>
+                <span class="status-badge red-oak">Ready for Review</span>
               </div>
-              <p class="summary">Red Oak is the warmer, richer Richmond brand expression with a stronger oak identity and representative content labeled for review.</p>
-              <dl class="detail-list">
-                <div><dt>Address</dt><dd>3609 Chamberlayne Ave 16B, Richmond, VA</dd></div>
-                <div><dt>Phone</dt><dd>804-329-6249</dd></div>
-                <div><dt>Website link</dt><dd><a href="https://jmlawton74.github.io/Lunar_Asset_Management-Demo/red-oak-apartments/">jmlawton74.github.io/Lunar_Asset_Management-Demo/red-oak-apartments/</a></dd></div>
-                <div><dt>Branding</dt><dd>Deep red-oak and brown palette, warm cream surfaces, charcoal text, natural accents, and prominent oak-tree logo use.</dd></div>
-                <div><dt>Leasing link</dt><dd>Direct external application link configured.</dd></div>
-                <div><dt>Resident portal</dt><dd>Direct external resident portal link configured.</dd></div>
-                <div><dt>Content status</dt><dd>Representative one- and two-bedroom floor plans; users are told to contact leasing for current availability, pricing, exact layouts, and finishes.</dd></div>
-              </dl>
+              <p class="summary">Richmond property website with refined Red Oak branding, a stronger tree mark, representative floor plans, and confirmed ResMan links.</p>
+              <div class="card-meta">
+                <span><strong>Address:</strong> 3609 Chamberlayne Ave 16B, Richmond, VA</span>
+                <span><strong>Phone:</strong> 804-329-6249</span>
+              </div>
               <div class="actions">
                 <a class="button" href="https://jmlawton74.github.io/Lunar_Asset_Management-Demo/red-oak-apartments/">Open Website</a><a class="button light" href="https://jmlawton74.github.io/Lunar_Asset_Management-Demo/red-oak-apartments/contact/">Leasing Review</a><a class="button light" href="https://jmlawton74.github.io/Lunar_Asset_Management-Demo/red-oak-apartments/residents/">Resident Access</a><a class="button light" href="https://lunarassetmgmt.myresman.com/Portal/Applicants/New/ROA?a=2084">Application Link</a><a class="button light" href="https://lunarassetmgmt.myresman.com/Portal/Access/SignIn/ROA">Resident Portal</a>
               </div>
@@ -751,18 +731,13 @@
                   <span class="location-label">Detroit, MI</span>
                   <h3>Imperial Manor Apartments</h3>
                 </div>
-                <span class="status-badge reference">Reference standard</span>
+                <span class="status-badge reference">Reference</span>
               </div>
-              <p class="summary">Imperial Manor is a protected benchmark implementation for structure, polish, navigation, and overall property-site quality.</p>
-              <dl class="detail-list">
-                <div><dt>Address</dt><dd>19132 Appleton St., Detroit, MI</dd></div>
-                <div><dt>Phone</dt><dd>313-246-6385</dd></div>
-                <div><dt>Website link</dt><dd><a href="https://jmlawton74.github.io/Lunar_Asset_Management-Demo/imperial-manor/">jmlawton74.github.io/Lunar_Asset_Management-Demo/imperial-manor/</a></dd></div>
-                <div><dt>Branding</dt><dd>Polished Imperial Manor design standard with established logo treatment, balanced hierarchy, and complete property navigation.</dd></div>
-                <div><dt>Leasing link</dt><dd>Direct external application link configured.</dd></div>
-                <div><dt>Resident portal</dt><dd>Direct external resident portal link configured.</dd></div>
-                <div><dt>Content status</dt><dd>Protected benchmark content retained for management review; current operational facts should still be confirmed before external updates.</dd></div>
-              </dl>
+              <p class="summary">Detroit property website used as the portfolio quality benchmark, with polished navigation and confirmed application and resident portal links.</p>
+              <div class="card-meta">
+                <span><strong>Address:</strong> 19132 Appleton St., Detroit, MI</span>
+                <span><strong>Phone:</strong> 313-246-6385</span>
+              </div>
               <div class="actions">
                 <a class="button" href="https://jmlawton74.github.io/Lunar_Asset_Management-Demo/imperial-manor/">Open Website</a><a class="button light" href="https://jmlawton74.github.io/Lunar_Asset_Management-Demo/imperial-manor/contact/">Leasing Review</a><a class="button light" href="https://jmlawton74.github.io/Lunar_Asset_Management-Demo/imperial-manor/residents/">Resident Access</a><a class="button light" href="https://lunarassetmgmt.myresman.com/Portal/Applicants/New/IMP?a=2084">Application Link</a><a class="button light" href="https://lunarassetmgmt.myresman.com/Portal/Access/SignIn/IMP">Resident Portal</a>
               </div>
@@ -783,18 +758,13 @@
                   <span class="location-label">Hartford, CT</span>
                   <h3>Adams, New Park, Evergreen &amp; Premium Apartments</h3>
                 </div>
-                <span class="status-badge active">Active demo</span>
+                <span class="status-badge active">Representative Content</span>
               </div>
-              <p class="summary">Hartford multi-property demo organized around four property-specific application and resident access paths.</p>
-              <dl class="detail-list">
-                <div><dt>Address</dt><dd>69-75 James Street, Hartford, CT</dd></div>
-                <div><dt>Phone</dt><dd>860-937-5835</dd></div>
-                <div><dt>Website link</dt><dd><a href="https://jmlawton74.github.io/Lunar_Asset_Management-Demo/adams-new-park-evergreen-premium/">jmlawton74.github.io/Lunar_Asset_Management-Demo/adams-new-park-evergreen-premium/</a></dd></div>
-                <div><dt>Branding</dt><dd>Hartford portfolio identity with deep teal, green, and gold accents for a multi-property operating group.</dd></div>
-                <div><dt>Leasing link</dt><dd>4 property-specific application links configured on the contact page.</dd></div>
-                <div><dt>Resident portal</dt><dd>4 property-specific resident portal links configured on the residents page.</dd></div>
-                <div><dt>Content status</dt><dd>Representative floor plans and local imagery; confirmed addresses and property-specific links are preserved.</dd></div>
-              </dl>
+              <p class="summary">Hartford multi-property website with four property-specific application and resident portal paths.</p>
+              <div class="card-meta">
+                <span><strong>Address:</strong> 69-75 James Street, Hartford, CT</span>
+                <span><strong>Phone:</strong> 860-937-5835</span>
+              </div>
               <div class="actions">
                 <a class="button" href="https://jmlawton74.github.io/Lunar_Asset_Management-Demo/adams-new-park-evergreen-premium/">Open Website</a><a class="button light" href="https://jmlawton74.github.io/Lunar_Asset_Management-Demo/adams-new-park-evergreen-premium/contact/">Leasing Review</a><a class="button light" href="https://jmlawton74.github.io/Lunar_Asset_Management-Demo/adams-new-park-evergreen-premium/residents/">Resident Access</a>
               </div>
@@ -815,18 +785,13 @@
                   <span class="location-label">Chicago, IL</span>
                   <h3>Blue &amp; Yellow Portfolio</h3>
                 </div>
-                <span class="status-badge active">Active demo</span>
+                <span class="status-badge active">Representative Content</span>
               </div>
-              <p class="summary">Chicago two-property demo organized for leadership review of branding, location context, and operational links.</p>
-              <dl class="detail-list">
-                <div><dt>Address</dt><dd>1235 W. 81st St., Chicago, IL</dd></div>
-                <div><dt>Phone</dt><dd>872-244-7377</dd></div>
-                <div><dt>Website link</dt><dd><a href="https://jmlawton74.github.io/Lunar_Asset_Management-Demo/blue-yellow-portfolio/">jmlawton74.github.io/Lunar_Asset_Management-Demo/blue-yellow-portfolio/</a></dd></div>
-                <div><dt>Branding</dt><dd>Chicago Blue &amp; Yellow identity with structured two-property organization and clear operational pathways.</dd></div>
-                <div><dt>Leasing link</dt><dd>2 property-specific application links configured on the contact page.</dd></div>
-                <div><dt>Resident portal</dt><dd>2 property-specific resident portal links configured on the residents page.</dd></div>
-                <div><dt>Content status</dt><dd>Representative layouts and Chicago neighborhood imagery; confirmed property links are preserved.</dd></div>
-              </dl>
+              <p class="summary">Chicago two-property website with separate Blue and Yellow portfolio links and resident access paths.</p>
+              <div class="card-meta">
+                <span><strong>Address:</strong> 1235 W. 81st St., Chicago, IL</span>
+                <span><strong>Phone:</strong> 872-244-7377</span>
+              </div>
               <div class="actions">
                 <a class="button" href="https://jmlawton74.github.io/Lunar_Asset_Management-Demo/blue-yellow-portfolio/">Open Website</a><a class="button light" href="https://jmlawton74.github.io/Lunar_Asset_Management-Demo/blue-yellow-portfolio/contact/">Leasing Review</a><a class="button light" href="https://jmlawton74.github.io/Lunar_Asset_Management-Demo/blue-yellow-portfolio/residents/">Resident Access</a>
               </div>
@@ -847,18 +812,13 @@
                   <span class="location-label">Tulsa, OK</span>
                   <h3>Melrose &amp; Silver Apartments</h3>
                 </div>
-                <span class="status-badge active">Active demo</span>
+                <span class="status-badge active">Representative Content</span>
               </div>
-              <p class="summary">Tulsa two-property demo with representative layouts and property-specific portal infrastructure.</p>
-              <dl class="detail-list">
-                <div><dt>Address</dt><dd>6321 E 9th Street, Tulsa, OK</dd></div>
-                <div><dt>Phone</dt><dd>539-867-1543</dd></div>
-                <div><dt>Website link</dt><dd><a href="https://jmlawton74.github.io/Lunar_Asset_Management-Demo/melrose-silver-apartments/">jmlawton74.github.io/Lunar_Asset_Management-Demo/melrose-silver-apartments/</a></dd></div>
-                <div><dt>Branding</dt><dd>Tulsa Melrose &amp; Silver direction using green, silver, and warm corridor-inspired accents.</dd></div>
-                <div><dt>Leasing link</dt><dd>2 property-specific application links configured on the contact page.</dd></div>
-                <div><dt>Resident portal</dt><dd>2 property-specific resident portal links configured on the residents page.</dd></div>
-                <div><dt>Content status</dt><dd>Representative layouts and Tulsa location imagery; current availability and pricing are not invented.</dd></div>
-              </dl>
+              <p class="summary">Tulsa two-property website with representative layouts and property-specific portal infrastructure.</p>
+              <div class="card-meta">
+                <span><strong>Address:</strong> 6321 E 9th Street, Tulsa, OK</span>
+                <span><strong>Phone:</strong> 539-867-1543</span>
+              </div>
               <div class="actions">
                 <a class="button" href="https://jmlawton74.github.io/Lunar_Asset_Management-Demo/melrose-silver-apartments/">Open Website</a><a class="button light" href="https://jmlawton74.github.io/Lunar_Asset_Management-Demo/melrose-silver-apartments/contact/">Leasing Review</a><a class="button light" href="https://jmlawton74.github.io/Lunar_Asset_Management-Demo/melrose-silver-apartments/residents/">Resident Access</a>
               </div>
@@ -879,18 +839,13 @@
                   <span class="location-label">Springfield, IL proof of concept</span>
                   <h3>Oak Haven Apartments</h3>
                 </div>
-                <span class="status-badge poc">Proof of concept</span>
+                <span class="status-badge poc">Proof of Concept</span>
               </div>
-              <p class="summary">Oak Haven is the approved protected proof-of-concept and remains unchanged; sample data is retained as a reference only.</p>
-              <dl class="detail-list">
-                <div><dt>Address</dt><dd>123 Oak Haven Drive, Springfield, IL</dd></div>
-                <div><dt>Phone</dt><dd>555-014-2280</dd></div>
-                <div><dt>Website link</dt><dd><a href="https://jmlawton74.github.io/Lunar_Asset_Management-Demo/oak-haven/">jmlawton74.github.io/Lunar_Asset_Management-Demo/oak-haven/</a></dd></div>
-                <div><dt>Branding</dt><dd>Protected proof-of-concept branding retained as approved sample material, not a production standard for new changes.</dd></div>
-                <div><dt>Leasing link</dt><dd>Sample example.com application link only; proof-of-concept placeholder.</dd></div>
-                <div><dt>Resident portal</dt><dd>Sample example.com resident portal link only; proof-of-concept placeholder.</dd></div>
-                <div><dt>Content status</dt><dd>Sample address, sample phone, example.com links, stock imagery, and sample content remain proof-of-concept placeholders.</dd></div>
-              </dl>
+              <p class="summary">Approved protected proof-of-concept site retained unchanged with sample content and placeholder links.</p>
+              <div class="card-meta">
+                <span><strong>Address:</strong> 123 Oak Haven Drive, Springfield, IL</span>
+                <span><strong>Phone:</strong> 555-014-2280</span>
+              </div>
               <div class="actions">
                 <a class="button" href="https://jmlawton74.github.io/Lunar_Asset_Management-Demo/oak-haven/">Open Website</a><a class="button light" href="https://jmlawton74.github.io/Lunar_Asset_Management-Demo/oak-haven/contact/">Leasing Review</a><a class="button light" href="https://jmlawton74.github.io/Lunar_Asset_Management-Demo/oak-haven/residents/">Resident Access</a><a class="button light" href="https://example.com/apply">Sample Application</a><a class="button light" href="https://example.com/residents">Sample Portal</a>
               </div>
@@ -902,14 +857,6 @@
             </div>
           </article>
         </div>
-      </div>
-    </section>
-    <section class="standards" id="standards" aria-label="Management review standards">
-      <div class="standard-grid">
-        <div class="standard-card"><strong>Portfolio visibility</strong><span>Leadership can open every property website from one GitHub Pages hub without relying on any property custom domain.</span></div>
-        <div class="standard-card"><strong>Operational readiness</strong><span>Cards identify leasing and resident portal setup so review can focus on infrastructure gaps before public launch.</span></div>
-        <div class="standard-card"><strong>Content governance</strong><span>Representative floor plans, sample data, placeholders, and proof-of-concept content are labeled for review clarity.</span></div>
-        <div class="standard-card"><strong>Compliance continuity</strong><span>Confirmed contact details, privacy/accessibility pages, photo credits, and Equal Opportunity Housing language remain in place on property sites.</span></div>
       </div>
     </section>
   </main>
