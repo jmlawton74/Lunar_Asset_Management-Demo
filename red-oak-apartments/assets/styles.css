@@ -1016,6 +1016,11 @@ body.site-red-oak-apartments {
 
 .site-red-oak-apartments .hero {
   border-bottom: 6px solid #8b6438;
+  min-height: clamp(520px, 58svh, 600px);
+}
+
+.site-red-oak-apartments .hero .hero-content {
+  min-height: clamp(520px, 58svh, 600px);
 }
 
 .site-red-oak-apartments .hero::after {
@@ -1067,6 +1072,11 @@ body.site-red-oak-apartments {
 .site-red-oak-apartments .page-hero h1,
 .site-red-oak-apartments .section-heading h2 {
   font-family: Georgia, "Times New Roman", serif;
+}
+
+.site-red-oak-apartments .hero h1 {
+  font-size: clamp(3rem, 6.2vw, 5rem);
+  max-width: 780px;
 }
 
 .site-red-oak-apartments .hero.has-logo h1 {
@@ -1166,6 +1176,18 @@ body.site-red-oak-apartments {
 
 .site-red-oak-apartments .feature-strip + .section .kicker {
   color: #f0c781;
+}
+
+.site-red-oak-apartments .hero + .section.alt {
+  padding-top: clamp(2.8rem, 5vw, 3.8rem);
+}
+
+.site-red-oak-apartments .hero + .section.alt .split {
+  grid-template-columns: minmax(0, 0.86fr) minmax(360px, 1.14fr);
+}
+
+.site-red-oak-apartments .hero + .section.alt .media-button img {
+  aspect-ratio: 16 / 10;
 }
 
 .site-red-oak-apartments .red-oak-values {
@@ -1402,16 +1424,16 @@ body.site-red-oak-apartments {
 }
 
 .site-red-oak-apartments .red-oak-cta .button.secondary {
-  background: rgba(255, 249, 239, 0.08);
-  border-color: rgba(255, 249, 239, 0.65);
-  color: #fff;
+  background: #fff9ef;
+  border-color: #fff9ef;
+  color: #241f1c;
 }
 
 .site-red-oak-apartments .red-oak-cta .button.secondary:hover,
 .site-red-oak-apartments .red-oak-cta .button.secondary:focus-visible {
-  background: rgba(255, 249, 239, 0.18);
+  background: #f3e3ca;
   border-color: #fff;
-  color: #fff;
+  color: #241f1c;
 }
 
 .mobile-sticky-cta {
@@ -1499,8 +1521,8 @@ body.site-red-oak-apartments {
 }
 
 .photo-credits {
-  color: rgba(255, 255, 255, 0.74);
-  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.76rem;
   margin: 0.8rem 0;
 }
 
@@ -1588,6 +1610,10 @@ body.site-red-oak-apartments {
   }
 
   .location-support {
+    grid-template-columns: 1fr;
+  }
+
+  .site-red-oak-apartments .hero + .section.alt .split {
     grid-template-columns: 1fr;
   }
 }
@@ -1795,6 +1821,23 @@ body.site-red-oak-apartments {
     max-width: 32ch;
   }
 
+  .site-red-oak-apartments .hero,
+  .site-red-oak-apartments .hero .hero-content {
+    min-height: 600px;
+  }
+
+  .site-red-oak-apartments .hero h1 {
+    font-size: clamp(2.45rem, 10.6vw, 3rem);
+  }
+
+  .site-red-oak-apartments .hero + .section.alt {
+    padding-top: 2rem;
+  }
+
+  .site-red-oak-apartments .hero + .section.alt .media {
+    order: -1;
+  }
+
   .site-red-oak-apartments .hero.has-logo h1 {
     font-size: clamp(2rem, 8.6vw, 2.45rem);
     max-width: 10.5ch;
@@ -1813,15 +1856,15 @@ body.site-red-oak-apartments {
   }
 
   .mobile-sticky-cta {
-    background: rgba(33, 27, 24, 0.96);
-    border-top: 3px solid #8b6438;
+    background: rgba(33, 27, 24, 0.92);
+    border-top: 2px solid #8b6438;
     bottom: 0;
-    box-shadow: 0 -16px 34px rgba(36, 31, 28, 0.22);
+    box-shadow: 0 -10px 24px rgba(36, 31, 28, 0.18);
     display: grid;
-    gap: 0.6rem;
+    gap: 0.5rem;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     left: 0;
-    padding: 0.65rem max(0.8rem, env(safe-area-inset-left)) max(0.65rem, env(safe-area-inset-bottom)) max(0.8rem, env(safe-area-inset-right));
+    padding: 0.5rem max(0.8rem, env(safe-area-inset-left)) max(0.5rem, env(safe-area-inset-bottom)) max(0.8rem, env(safe-area-inset-right));
     position: fixed;
     right: 0;
     z-index: 35;
@@ -1834,11 +1877,12 @@ body.site-red-oak-apartments {
     border-radius: var(--radius);
     color: #fff;
     display: inline-flex;
+    font-size: 0.95rem;
     font-weight: 900;
     justify-content: center;
     line-height: 1.15;
-    min-height: 48px;
-    padding: 0.65rem 0.7rem;
+    min-height: 42px;
+    padding: 0.55rem 0.65rem;
     text-align: center;
     text-decoration: none;
   }
@@ -1849,7 +1893,7 @@ body.site-red-oak-apartments {
   }
 
   body.site-red-oak-apartments {
-    padding-bottom: 72px;
+    padding-bottom: 58px;
   }
 }
 
