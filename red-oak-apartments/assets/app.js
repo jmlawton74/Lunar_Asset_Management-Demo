@@ -130,8 +130,20 @@
       const message = form.querySelector("[data-form-message]");
       form.reset();
       if (message) {
-        message.textContent = "Thanks. Your message was recorded for this preview. Connect the form before launch so it sends to the leasing team.";
+        message.textContent = "For current availability, pricing, and tour options, please call 804-329-6249 or email leasing@lunarassetmanagement.com.";
       }
     });
   });
+
+  if (document.body.classList.contains("site-red-oak-apartments") && !document.querySelector(".mobile-sticky-cta")) {
+    const floorPlansLink = document.querySelector('.nav-list a[href$="floor-plans/"]');
+    const sticky = document.createElement("nav");
+    sticky.className = "mobile-sticky-cta";
+    sticky.setAttribute("aria-label", "Quick leasing actions");
+    sticky.innerHTML = `
+      <a href="tel:8043296249">Call</a>
+      <a href="${floorPlansLink ? floorPlansLink.href : "./floor-plans/"}">Check Availability</a>
+    `;
+    document.body.appendChild(sticky);
+  }
 })();

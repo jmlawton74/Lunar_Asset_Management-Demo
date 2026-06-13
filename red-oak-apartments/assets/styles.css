@@ -68,6 +68,11 @@ textarea {
   width: 1px;
 }
 
+:focus-visible {
+  outline: 3px solid #b0854e;
+  outline-offset: 3px;
+}
+
 .button,
 .text-link,
 .nav-toggle,
@@ -710,6 +715,62 @@ textarea {
   text-transform: uppercase;
 }
 
+.plan-stats {
+  display: grid;
+  gap: 0.65rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0.85rem 0;
+}
+
+.plan-stats div {
+  align-items: center;
+  background: rgba(245, 235, 220, 0.72);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  display: grid;
+  gap: 0.2rem;
+  min-width: 0;
+  padding: 0.7rem;
+}
+
+.plan-stats dt,
+.plan-stats dd {
+  margin: 0;
+}
+
+.plan-stats dt {
+  align-items: center;
+  color: var(--color-muted);
+  display: flex;
+  font-size: 0.78rem;
+  font-weight: 800;
+  gap: 0.4rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.plan-stats dd {
+  color: var(--color-ink);
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.plan-stat-icon {
+  align-items: center;
+  background: var(--color-primary);
+  border-radius: 999px;
+  color: #fff;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-size: 0.75rem;
+  font-weight: 900;
+  height: 1.45rem;
+  justify-content: center;
+  letter-spacing: 0;
+  width: 1.45rem;
+}
+
 .list-columns {
   display: grid;
   gap: var(--grid-gap, 1.25rem);
@@ -1204,6 +1265,23 @@ body.site-red-oak-apartments {
 .site-red-oak-apartments .site-footer {
   background: #211b18;
   border-top: 5px solid #8b6438;
+  overflow: hidden;
+  position: relative;
+}
+
+.site-red-oak-apartments .site-footer::after {
+  background-image: url("red-oak/red-oak-tree-mark-20260610.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: -2.25rem;
+  content: "";
+  height: 12rem;
+  opacity: 0.08;
+  pointer-events: none;
+  position: absolute;
+  right: 2rem;
+  width: 12rem;
 }
 
 .red-oak-cta {
@@ -1253,6 +1331,10 @@ body.site-red-oak-apartments {
   background: rgba(255, 249, 239, 0.18);
   border-color: #fff;
   color: #fff;
+}
+
+.mobile-sticky-cta {
+  display: none;
 }
 
 .contact-grid {
@@ -1637,6 +1719,50 @@ body.site-red-oak-apartments {
 
   .site-red-oak-apartments .hero-logo {
     width: min(118px, 36vw);
+  }
+
+  .plan-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .mobile-sticky-cta {
+    background: rgba(33, 27, 24, 0.96);
+    border-top: 3px solid #8b6438;
+    bottom: 0;
+    box-shadow: 0 -16px 34px rgba(36, 31, 28, 0.22);
+    display: grid;
+    gap: 0.6rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    left: 0;
+    padding: 0.65rem max(0.8rem, env(safe-area-inset-left)) max(0.65rem, env(safe-area-inset-bottom)) max(0.8rem, env(safe-area-inset-right));
+    position: fixed;
+    right: 0;
+    z-index: 35;
+  }
+
+  .mobile-sticky-cta a {
+    align-items: center;
+    background: #5f2320;
+    border: 1px solid #b0854e;
+    border-radius: var(--radius);
+    color: #fff;
+    display: inline-flex;
+    font-weight: 900;
+    justify-content: center;
+    line-height: 1.15;
+    min-height: 48px;
+    padding: 0.65rem 0.7rem;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .mobile-sticky-cta a:first-child {
+    background: #fff9ef;
+    color: #241f1c;
+  }
+
+  body.site-red-oak-apartments {
+    padding-bottom: 72px;
   }
 }
 
