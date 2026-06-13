@@ -1008,9 +1008,9 @@ body.site-red-oak-apartments {
 }
 
 .site-red-oak-apartments .button.secondary {
-  background: transparent;
-  border-color: rgba(36, 31, 28, 0.52);
-  box-shadow: none;
+  background: #fff9ef;
+  border-color: rgba(139, 100, 56, 0.72);
+  box-shadow: 0 8px 18px rgba(36, 31, 28, 0.06);
   color: #241f1c;
 }
 
@@ -1271,6 +1271,31 @@ body.site-red-oak-apartments {
   gap: 0.7rem;
   min-height: 100%;
   padding: clamp(1.15rem, 2vw, 1.5rem);
+  position: relative;
+}
+
+.location-card::before {
+  background:
+    linear-gradient(135deg, #5f2320, #8b6438 58%, #435b3c);
+  border-radius: 999px;
+  box-shadow: 0 0 0 6px rgba(139, 100, 56, 0.12);
+  content: "";
+  height: 0.68rem;
+  position: absolute;
+  right: 1.15rem;
+  top: 1.15rem;
+  width: 0.68rem;
+}
+
+.location-card .value-number {
+  align-items: center;
+  background: rgba(95, 35, 32, 0.08);
+  border: 1px solid rgba(95, 35, 32, 0.16);
+  border-radius: 999px;
+  display: inline-flex;
+  justify-content: center;
+  min-height: 1.7rem;
+  width: 2.8rem;
 }
 
 .location-card h3 {
