@@ -671,8 +671,8 @@ textarea {
 
 .floor-plan-button img {
   background: #fbf7ef;
-  object-fit: contain;
-  padding: 0.35rem;
+  object-fit: cover;
+  padding: 0;
 }
 
 .card-body {

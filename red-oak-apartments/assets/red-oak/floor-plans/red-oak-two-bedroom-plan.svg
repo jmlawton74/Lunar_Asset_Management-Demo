@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Red Oak Apartments representative two-bedroom floor plan</title>
+  <desc id="desc">A compact representative two-bedroom apartment layout with living and dining, kitchen, bath, closets, and two bedrooms.</desc>
+  <rect width="960" height="600" fill="#f5ebdc"/>
+  <rect x="38" y="70" width="884" height="462" rx="26" fill="#fff9ef" stroke="#241f1c" stroke-width="16"/>
+  <g fill="#fbf7ef" stroke="#435b3c" stroke-width="5">
+    <rect x="76" y="108" width="384" height="214" rx="14"/>
+    <rect x="76" y="364" width="384" height="130" rx="14"/>
+    <rect x="500" y="108" width="372" height="106" rx="14"/>
+    <rect x="500" y="250" width="160" height="112" rx="14"/>
+    <rect x="700" y="250" width="172" height="112" rx="14"/>
+    <rect x="500" y="400" width="372" height="94" rx="14"/>
+  </g>
+  <g fill="none" stroke="#241f1c" stroke-linecap="square">
+    <path stroke-width="12" d="M480 70v462M38 344h442M480 232h442M680 232v150M480 382h442"/>
+    <path stroke-width="7" stroke="#5f2320" stroke-linecap="round" d="M322 532c0-58 47-105 105-105M480 326c-48 0-88-40-88-88M664 332c45 0 82-37 82-82M644 466c0-42 34-76 76-76"/>
+  </g>
+  <g fill="#435b3c">
+    <rect x="94" y="88" width="88" height="14" rx="7"/>
+    <rect x="758" y="512" width="92" height="14" rx="7"/>
+    <circle cx="842" cy="160" r="17"/>
+  </g>
+  <circle cx="148" cy="450" r="15" fill="#5f2320"/>
+  <g fill="#241f1c" font-family="Arial, Helvetica, sans-serif" font-weight="800" text-anchor="middle">
+    <text x="480" y="45" font-size="31">Two Bedroom</text>
+    <text x="268" y="225" font-size="24">Living / Dining</text>
+    <text x="268" y="443" font-size="24">Bedroom 1</text>
+    <text x="686" y="174" font-size="24">Kitchen</text>
+    <text x="580" y="316" font-size="23">Bath</text>
+    <text x="786" y="316" font-size="22">Closets</text>
+    <text x="686" y="456" font-size="24">Bedroom 2</text>
+    <text x="480" y="574" font-size="22">Representative layout - confirm current details with leasing</text>
+  </g>
+</svg>
