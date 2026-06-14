@@ -1122,12 +1122,11 @@ body.site-red-oak-apartments {
 
 .site-red-oak-apartments .hero .eyebrow {
   align-self: start;
-  background: rgba(33, 27, 24, 0.9);
-  border-radius: 4px;
+  background: transparent;
   color: #fff;
   line-height: 1.25;
-  padding: 0.35rem 0.55rem;
-  text-shadow: none;
+  padding: 0;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.58);
 }
 
 .site-red-oak-apartments .media,
