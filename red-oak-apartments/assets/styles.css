@@ -1040,7 +1040,7 @@ body.site-red-oak-apartments {
 
 .site-red-oak-apartments .media-button img,
 .site-red-oak-apartments .gallery-button img {
-  filter: brightness(1.12) saturate(1.12) contrast(1.02);
+  filter: brightness(1.03) saturate(0.9) contrast(1.05);
 }
 
 .site-red-oak-apartments .hero.has-logo .hero-content {
