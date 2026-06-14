@@ -1036,6 +1036,7 @@ body.site-red-oak-apartments {
 
 .site-red-oak-apartments .hero > img {
   filter: none;
+  object-position: 38% center;
 }
 
 .site-red-oak-apartments .media-button img,
@@ -1925,5 +1926,9 @@ body.site-red-oak-apartments {
 @media (max-width: 640px) {
   .site-red-oak-apartments .header-actions {
     grid-template-columns: 1fr;
+  }
+
+  .site-red-oak-apartments .hero > img {
+    object-position: 31% center;
   }
 }
