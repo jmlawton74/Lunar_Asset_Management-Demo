@@ -652,7 +652,19 @@ textarea {
 }
 
 .floor-plan-grid {
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1180px;
+  --card-padding: 0.95rem;
+}
+
+.floor-plan-grid .card {
+  flex: 1 1 520px;
+  max-width: 586px;
 }
 
 .card {
@@ -671,8 +683,14 @@ textarea {
 
 .floor-plan-button img {
   background: #fbf7ef;
-  object-fit: cover;
+  border-bottom: 1px solid var(--color-border);
+  display: block;
+  object-fit: contain;
   padding: 0;
+}
+
+.floor-plan-grid .card-photo-button {
+  border-radius: 0;
 }
 
 .card-body {
