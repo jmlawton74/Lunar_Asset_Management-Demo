@@ -38,6 +38,11 @@ a {
   color: inherit;
 }
 
+:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--color-secondary), white 12%);
+  outline-offset: 3px;
+}
+
 button,
 input,
 select,
@@ -614,6 +619,11 @@ textarea {
   margin: 0;
 }
 
+.property-link-card .property-summary {
+  color: var(--color-ink);
+  font-size: 0.94rem;
+}
+
 .property-link-card .card-actions {
   margin-top: auto;
 }
@@ -701,6 +711,48 @@ textarea {
   margin: var(--meta-margin, 0 0 0.9rem);
 }
 
+.floor-plan-meta {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  list-style: none;
+  margin: 0.85rem 0;
+  padding: 0;
+}
+
+.floor-plan-meta li {
+  background: color-mix(in srgb, var(--color-primary), transparent 94%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  display: grid;
+  gap: 0.1rem;
+  min-height: 58px;
+  padding: 0.55rem 0.65rem;
+}
+
+.floor-plan-meta span {
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.floor-plan-meta strong {
+  color: var(--color-primary);
+  font-size: 0.98rem;
+  line-height: 1.2;
+}
+
+.floor-plan-note {
+  background: color-mix(in srgb, var(--color-secondary), white 88%);
+  border: 1px solid color-mix(in srgb, var(--color-secondary), transparent 58%);
+  border-radius: var(--radius);
+  color: var(--color-ink);
+  font-weight: 700;
+  margin: 1rem 0 0;
+  padding: 0.85rem 1rem;
+}
+
 .price {
   color: var(--color-primary);
   font-size: 1.05rem;
@@ -754,6 +806,37 @@ textarea {
   margin-left: auto;
   margin-right: auto;
   max-width: 1180px;
+}
+
+.gallery-group {
+  margin-top: 2rem;
+}
+
+.gallery-group:first-of-type {
+  margin-top: 1.25rem;
+}
+
+.gallery-group-heading {
+  align-items: baseline;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.55rem;
+}
+
+.gallery-group-heading h3 {
+  color: var(--color-primary);
+  font-size: 1.35rem;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.gallery-group-heading span {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  font-weight: 800;
 }
 
 .gallery-button,
@@ -861,6 +944,54 @@ textarea {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.contact-options-grid {
+  align-items: start;
+  display: grid;
+  gap: var(--split-gap, 2rem);
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+}
+
+.contact-choice-panel h2 {
+  color: var(--color-primary);
+  font-size: 1.35rem;
+  margin: 0 0 0.35rem;
+}
+
+.contact-choice-panel p {
+  color: var(--color-muted);
+  margin-top: 0;
+}
+
+.contact-choice-list {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.contact-choice {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  color: var(--color-primary);
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.75rem;
+  text-decoration: none;
+}
+
+.contact-choice:hover,
+.contact-choice:focus-visible {
+  background: color-mix(in srgb, var(--color-primary), transparent 92%);
+  border-color: var(--color-primary);
+}
+
+.contact-choice span {
+  font-weight: 800;
+}
+
+.contact-choice small {
+  color: var(--color-muted);
+  font-size: 0.83rem;
 }
 
 body.site-red-oak-apartments {
@@ -1298,6 +1429,7 @@ body.site-red-oak-apartments {
 
   .split,
   .split.reverse,
+  .contact-options-grid,
   .contact-grid,
   .footer-inner,
   .lifestyle-grid {
@@ -1449,10 +1581,27 @@ body.site-red-oak-apartments {
   .card-grid,
   .gallery-grid,
   .list-columns,
+  .contact-options-grid,
   .property-link-grid,
   .neighborhood-grid,
   .form-row {
     grid-template-columns: 1fr;
+  }
+
+  .hero-actions .button,
+  .card-actions .button,
+  .card-actions .text-link {
+    width: 100%;
+  }
+
+  .floor-plan-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-group-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.25rem;
   }
 
   .header-actions .button {
