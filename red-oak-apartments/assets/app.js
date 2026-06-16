@@ -124,13 +124,28 @@
     lightbox.addEventListener("close", resetTransform);
   }
 
-  document.querySelectorAll("[data-demo-form]").forEach((form) => {
+  document.querySelectorAll("[data-email-form]").forEach((form) => {
     form.addEventListener("submit", (event) => {
       event.preventDefault();
       const message = form.querySelector("[data-form-message]");
-      form.reset();
+      const formData = new FormData(form);
+      const recipient = form.dataset.emailRecipient || "leasing@lunarassetmanagement.com";
+      const subject = form.dataset.emailSubject || "Red Oak Apartments leasing inquiry";
+      const fields = [
+        ["first-name", "First name"],
+        ["last-name", "Last name"],
+        ["email", "Email"],
+        ["phone", "Phone"],
+        ["move-in", "Preferred move-in"],
+        ["bedrooms", "Bedrooms"],
+        ["message", "Message"],
+      ];
+      const body = fields
+        .map(([name, label]) => `${label}: ${formData.get(name) || "Not provided"}`)
+        .join("\n");
+      window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       if (message) {
-        message.textContent = "For current availability, pricing, and tour options, please call 804-329-6249 or email leasing@lunarassetmanagement.com.";
+        message.textContent = "Your email app should open with this inquiry addressed to leasing@lunarassetmanagement.com.";
       }
     });
   });
