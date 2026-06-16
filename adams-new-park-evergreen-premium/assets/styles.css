@@ -839,6 +839,88 @@ textarea {
   font-weight: 800;
 }
 
+.gallery-preview-grid,
+.convenience-grid {
+  display: grid;
+  gap: var(--grid-gap, 1.25rem);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 1.25rem;
+}
+
+.gallery-preview-card,
+.convenience-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.gallery-preview-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.gallery-preview-card .media-button img {
+  aspect-ratio: 4 / 3;
+}
+
+.gallery-preview-card div,
+.convenience-card {
+  padding: var(--card-padding, 1.25rem);
+}
+
+.gallery-preview-card h3,
+.convenience-card h3 {
+  color: var(--color-primary);
+  font-size: 1.12rem;
+  line-height: 1.2;
+  margin: 0 0 0.35rem;
+}
+
+.gallery-preview-card p,
+.convenience-card p {
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.convenience-card {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.feature-token {
+  align-items: center;
+  background: color-mix(in srgb, var(--color-secondary), white 80%);
+  border: 1px solid color-mix(in srgb, var(--color-secondary), transparent 58%);
+  border-radius: 999px;
+  color: var(--color-primary);
+  display: inline-flex;
+  font-size: 0.82rem;
+  font-weight: 900;
+  height: 2rem;
+  justify-content: center;
+  width: 2rem;
+}
+
+.credibility-section {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--color-primary), black 12%), var(--color-primary));
+  color: #fff;
+}
+
+.credibility-section .section-heading p,
+.credibility-section .meta {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.credibility-section .kicker {
+  color: color-mix(in srgb, var(--color-secondary), white 16%);
+}
+
+.credibility-panel {
+  border-color: rgba(255, 255, 255, 0.26);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.18);
+}
+
 .gallery-button,
 .media-button,
 .card-photo-button {
@@ -1441,6 +1523,8 @@ body.site-red-oak-apartments {
   }
 
   .card-grid,
+  .convenience-grid,
+  .gallery-preview-grid,
   .gallery-grid,
   .list-columns,
   .property-link-grid,
@@ -1579,6 +1663,8 @@ body.site-red-oak-apartments {
 
   .feature-list,
   .card-grid,
+  .convenience-grid,
+  .gallery-preview-grid,
   .gallery-grid,
   .list-columns,
   .contact-options-grid,
