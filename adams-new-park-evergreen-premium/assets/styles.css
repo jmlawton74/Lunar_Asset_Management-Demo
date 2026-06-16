@@ -74,6 +74,7 @@ textarea {
 .gallery-button,
 .media-button,
 .card-photo-button,
+.property-link-image,
 .filter-button {
   transition: background 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
 }
@@ -583,6 +584,24 @@ textarea {
   padding: var(--card-padding, 1.25rem);
 }
 
+.property-link-image {
+  aspect-ratio: 4 / 3;
+  background: transparent;
+  border: 0;
+  border-radius: var(--radius);
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+}
+
+.property-link-image img {
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--photo-position, center center);
+  width: 100%;
+}
+
 .property-link-card h3 {
   color: var(--color-primary);
   font-size: 1.15rem;
@@ -755,7 +774,9 @@ textarea {
 .media-button:hover,
 .media-button:focus-visible,
 .card-photo-button:hover,
-.card-photo-button:focus-visible {
+.card-photo-button:focus-visible,
+.property-link-image:hover,
+.property-link-image:focus-visible {
   transform: translateY(-2px);
 }
 
