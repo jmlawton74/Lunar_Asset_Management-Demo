@@ -124,28 +124,56 @@
     lightbox.addEventListener("close", resetTransform);
   }
 
-  document.querySelectorAll("[data-email-form]").forEach((form) => {
-    form.addEventListener("submit", (event) => {
+  document.querySelectorAll("[data-contact-form]").forEach((form) => {
+    form.addEventListener("submit", async (event) => {
       event.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
       const message = form.querySelector("[data-form-message]");
+      const submitButton = form.querySelector("button[type='submit']");
+      const originalButtonText = submitButton ? submitButton.textContent : "";
+
+      if (message) message.textContent = "Sending your message...";
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
+      }
+
       const formData = new FormData(form);
-      const recipient = form.dataset.emailRecipient || "leasing@lunarassetmanagement.com";
-      const subject = form.dataset.emailSubject || "Red Oak Apartments leasing inquiry";
-      const fields = [
-        ["first-name", "First name"],
-        ["last-name", "Last name"],
-        ["email", "Email"],
-        ["phone", "Phone"],
-        ["move-in", "Preferred move-in"],
-        ["bedrooms", "Bedrooms"],
-        ["message", "Message"],
-      ];
-      const body = fields
-        .map(([name, label]) => `${label}: ${formData.get(name) || "Not provided"}`)
-        .join("\n");
-      window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      if (message) {
-        message.textContent = "Your email app should open with this inquiry addressed to leasing@lunarassetmanagement.com.";
+      formData.set("source-url", window.location.href);
+      const payload = Object.fromEntries(formData.entries());
+
+      try {
+        const response = await fetch(form.dataset.submitEndpoint || form.action || "/api/contact", {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(payload)
+        });
+        const data = await response.json().catch(() => ({}));
+
+        if (!response.ok || data.ok === false) {
+          throw new Error(data.message || "Form submission failed.");
+        }
+
+        form.reset();
+        if (message) {
+          message.textContent = form.dataset.successMessage || "Thanks. Your message was sent to the leasing team.";
+        }
+      } catch (_) {
+        const fallback = form.dataset.fallbackMessage || "We could not send your message right now. Please call or email the leasing team directly.";
+        if (message) message.textContent = fallback;
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = originalButtonText;
+        }
       }
     });
   });

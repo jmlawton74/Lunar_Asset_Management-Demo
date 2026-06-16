@@ -124,13 +124,67 @@
     lightbox.addEventListener("close", resetTransform);
   }
 
+  document.querySelectorAll("[data-contact-form]").forEach((form) => {
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      const message = form.querySelector("[data-form-message]");
+      const submitButton = form.querySelector("button[type='submit']");
+      const originalButtonText = submitButton ? submitButton.textContent : "";
+
+      if (message) message.textContent = "Sending your message...";
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
+      }
+
+      const formData = new FormData(form);
+      formData.set("source-url", window.location.href);
+      const payload = Object.fromEntries(formData.entries());
+
+      try {
+        const response = await fetch(form.dataset.submitEndpoint || form.action || "/api/contact", {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(payload)
+        });
+        const data = await response.json().catch(() => ({}));
+
+        if (!response.ok || data.ok === false) {
+          throw new Error(data.message || "Form submission failed.");
+        }
+
+        form.reset();
+        if (message) {
+          message.textContent = form.dataset.successMessage || "Thanks. Your message was sent to the leasing team.";
+        }
+      } catch (_) {
+        const fallback = form.dataset.fallbackMessage || "We could not send your message right now. Please call or email the leasing team directly.";
+        if (message) message.textContent = fallback;
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = originalButtonText;
+        }
+      }
+    });
+  });
+
   document.querySelectorAll("[data-demo-form]").forEach((form) => {
     form.addEventListener("submit", (event) => {
       event.preventDefault();
       const message = form.querySelector("[data-form-message]");
       form.reset();
       if (message) {
-        message.textContent = "Thanks. Your message was recorded for this preview. Connect the form before launch so it sends to the leasing team.";
+        message.textContent = "This preview form is not connected to email delivery yet.";
       }
     });
   });
