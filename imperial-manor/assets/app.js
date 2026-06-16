@@ -147,7 +147,7 @@
       if (submitButton) submitButton.disabled = true;
 
       try {
-        const response = await fetch(form.action, {
+        const response = await fetch(form.dataset.submitEndpoint || form.action, {
           method: form.method || "POST",
           headers: { Accept: "application/json" },
           body: new FormData(form)
