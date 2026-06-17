@@ -1135,6 +1135,19 @@ textarea {
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
 }
 
+.contact-options-section .section-heading h2 {
+  line-height: 1.12;
+  overflow-wrap: anywhere;
+}
+
+.contact-options-section .section-heading .cta-row {
+  margin-top: clamp(1rem, 2vw, 1.45rem);
+}
+
+.contact-options-section .cta-row .button {
+  flex: 0 1 auto;
+}
+
 .contact-choice-panel h2 {
   color: var(--color-primary);
   font-size: 1.35rem;
