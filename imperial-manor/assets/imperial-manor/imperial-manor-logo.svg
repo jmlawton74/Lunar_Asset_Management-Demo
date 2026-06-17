@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Imperial Manor Apartments logo</title>
+  <desc id="desc">A gold Imperial Manor monogram and wordmark on a deep purple field.</desc>
+  <defs>
+    <linearGradient id="purple" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#2f1749"/>
+      <stop offset="1" stop-color="#251139"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff0b6"/>
+      <stop offset=".45" stop-color="#d8af4f"/>
+      <stop offset="1" stop-color="#f4d986"/>
+    </linearGradient>
+    <style>
+      .gold { fill: url(#gold); }
+      .cream { fill: #fff9ec; }
+      .shadow { fill: #170a24; opacity: .23; }
+      .wordmark { fill: #fff9ec; font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
+      .submark { fill: #fff9ec; font-family: Arial, Helvetica, sans-serif; font-weight: 700; }
+    </style>
+  </defs>
+  <rect width="900" height="1080" fill="url(#purple)"/>
+  <path class="shadow" d="M0 548h212l238 366 238-366h212v484H0z"/>
+  <g transform="translate(315 70) scale(.33)">
+    <path class="gold" d="M86 65h118L275 0l71 65h118v57H346l-71-63-71 63H86z"/>
+    <path class="gold" d="M126 151h298v42H126z"/>
+    <path class="gold" d="M152 226h246v42H152z"/>
+    <path class="gold" d="M42 70h72c34 0 52 18 52 52v204c0 34-18 52-52 52H42v-48h37c17 0 25-9 25-26V144c0-17-8-26-25-26H42z"/>
+    <path class="gold" d="M508 70h-72c-34 0-52 18-52 52v204c0 34 18 52 52 52h72v-48h-37c-17 0-25-9-25-26V144c0-17 8-26 25-26h37z"/>
+    <path class="gold" d="M147 70h73l55 116 55-116h73l-128 257z"/>
+    <path class="gold" d="M147 378h95v49h-95z"/>
+    <path class="gold" d="M308 378h95v49h-95z"/>
+  </g>
+  <text class="wordmark" x="450" y="385" text-anchor="middle" font-size="76">Imperial Manor</text>
+  <text class="submark" x="450" y="450" text-anchor="middle" font-size="44" letter-spacing="14">APARTMENTS</text>
+  <g transform="translate(180 545)">
+    <path class="gold" d="M48 80h154L270 0l68 80h154v58H338l-68-76-68 76H48z"/>
+    <path class="gold" d="M88 168h364v52H88z"/>
+    <path class="gold" d="M118 254h304v52H118z"/>
+    <path class="gold" d="M0 80h96c44 0 66 23 66 68v326c0 45-22 68-66 68H0v-58h51c24 0 36-13 36-39V174c0-26-12-39-36-39H0z"/>
+    <path class="gold" d="M540 80h-96c-44 0-66 23-66 68v326c0 45 22 68 66 68h96v-58h-51c-24 0-36-13-36-39V174c0-26 12-39 36-39h51z"/>
+    <path class="gold" d="M123 80h90l57 121 57-121h90L270 460z"/>
+    <path class="gold" d="M116 542h118v54H116z"/>
+    <path class="gold" d="M306 542h118v54H306z"/>
+  </g>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" role="img" aria-labelledby="title desc">
+  <title id="title">New Park Apartments logo</title>
+  <desc id="desc">A green apartment skyline with a small tree above the words New Park Apartments.</desc>
+  <defs>
+    <style>
+      .building { fill: #334d24; }
+      .window { fill: #ffffff; }
+      .wordmark { fill: #075f70; font-family: Arial, Helvetica, sans-serif; font-weight: 400; }
+      .submark { fill: #334d24; font-family: Arial, Helvetica, sans-serif; font-weight: 600; }
+    </style>
+  </defs>
+  <g transform="translate(235 68)">
+    <path class="building" d="M8 196h88v-75l60-27v102h30V57l68-39 68 39v139h30V96l42 18v82h78v-53l53 25v32h25l38 12H0z"/>
+    <path class="building" d="M247 18h14v178h-14z"/>
+    <path class="building" d="M352 86h14v110h-14z"/>
+    <path class="building" d="M185 78h14v118h-14z"/>
+    <g class="window">
+      <rect x="128" y="111" width="16" height="18"/>
+      <rect x="158" y="98" width="16" height="18"/>
+      <rect x="128" y="144" width="16" height="18"/>
+      <rect x="158" y="131" width="16" height="18"/>
+      <rect x="220" y="74" width="18" height="18"/>
+      <rect x="270" y="74" width="18" height="18"/>
+      <rect x="220" y="111" width="18" height="18"/>
+      <rect x="270" y="111" width="18" height="18"/>
+      <rect x="220" y="148" width="18" height="18"/>
+      <rect x="270" y="148" width="18" height="18"/>
+      <rect x="395" y="130" width="18" height="18"/>
+      <rect x="430" y="144" width="18" height="18"/>
+      <rect x="395" y="164" width="18" height="18"/>
+      <rect x="430" y="178" width="18" height="18"/>
+    </g>
+    <path class="window" d="M304 169c0-26 20-47 46-47 22 0 41 16 45 37 20 2 36 18 36 39h-64v-2c0-16-13-29-29-29s-29 13-29 29v2h-34c3-13 14-24 29-29z"/>
+    <path class="building" d="M336 200v-53h13v25l27-22 9 10-26 22 31 1v13l-32-2v6z"/>
+    <path class="building" d="M345 179c0-14 12-26 27-26 14 0 26 12 26 26s-12 26-26 26c-15 0-27-12-27-26z"/>
+    <path class="building" d="M603 214c-69-14-154-21-254-21-112 0-227 8-349 24 106-27 223-41 351-41 100 0 184 13 252 38z" opacity=".92"/>
+  </g>
+  <text class="wordmark" x="500" y="364" text-anchor="middle" font-size="138">New Park</text>
+  <text class="submark" x="500" y="452" text-anchor="middle" font-size="54" letter-spacing="14">Apartments</text>
+</svg>
