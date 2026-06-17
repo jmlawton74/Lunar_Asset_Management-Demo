@@ -35,6 +35,26 @@
     });
   });
 
+  document.querySelectorAll("[data-property-gallery-open]").forEach((trigger) => {
+    trigger.addEventListener("click", (event) => {
+      const interactive = event.target.closest("a, input, select, textarea");
+      if (interactive && interactive !== trigger) return;
+
+      const dialog = document.querySelector(`[data-property-gallery-dialog="${trigger.dataset.propertyGalleryOpen}"]`);
+      if (dialog) dialog.showModal();
+    });
+  });
+
+  document.querySelectorAll("[data-property-gallery-dialog]").forEach((dialog) => {
+    dialog.querySelectorAll("[data-property-gallery-close]").forEach((close) => {
+      close.addEventListener("click", () => dialog.close());
+    });
+
+    dialog.addEventListener("click", (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+  });
+
   const lightbox = document.querySelector("[data-lightbox]");
   if (lightbox) {
     const image = lightbox.querySelector("[data-lightbox-image]");
