@@ -23,6 +23,38 @@
     });
   });
 
+  document.querySelectorAll("[data-gallery-filter]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const value = button.dataset.galleryFilter;
+      document.querySelectorAll("[data-gallery-filter]").forEach((item) => {
+        item.setAttribute("aria-pressed", String(item === button));
+      });
+      document.querySelectorAll("[data-gallery-group]").forEach((group) => {
+        group.toggleAttribute("hidden", group.dataset.galleryGroup !== value);
+      });
+    });
+  });
+
+  document.querySelectorAll("[data-property-gallery-open]").forEach((trigger) => {
+    trigger.addEventListener("click", (event) => {
+      const interactive = event.target.closest("a, input, select, textarea");
+      if (interactive && interactive !== trigger) return;
+
+      const dialog = document.querySelector(`[data-property-gallery-dialog="${trigger.dataset.propertyGalleryOpen}"]`);
+      if (dialog) dialog.showModal();
+    });
+  });
+
+  document.querySelectorAll("[data-property-gallery-dialog]").forEach((dialog) => {
+    dialog.querySelectorAll("[data-property-gallery-close]").forEach((close) => {
+      close.addEventListener("click", () => dialog.close());
+    });
+
+    dialog.addEventListener("click", (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+  });
+
   const lightbox = document.querySelector("[data-lightbox]");
   if (lightbox) {
     const image = lightbox.querySelector("[data-lightbox-image]");
@@ -124,14 +156,20 @@
     lightbox.addEventListener("close", resetTransform);
   }
 
+  document.querySelectorAll("[data-demo-form]").forEach((form) => {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const message = form.querySelector("[data-form-message]");
+      form.reset();
+      if (message) {
+        message.textContent = "Thanks. Your message was recorded for this preview. Connect the form before launch so it sends to the leasing team.";
+      }
+    });
+  });
+
   document.querySelectorAll("[data-contact-form]").forEach((form) => {
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
-
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
-      }
 
       const message = form.querySelector("[data-form-message]");
       const submitButton = form.querySelector("button[type='submit']");
@@ -143,12 +181,11 @@
         submitButton.textContent = "Sending...";
       }
 
-      const formData = new FormData(form);
-      formData.set("source-url", window.location.href);
-      const payload = Object.fromEntries(formData.entries());
-
       try {
-        const response = await fetch(form.dataset.submitEndpoint || form.action || "/api/contact", {
+        const formData = new FormData(form);
+        formData.set("source-url", window.location.href);
+        const payload = Object.fromEntries(formData.entries());
+        const response = await fetch(form.dataset.submitEndpoint || form.action, {
           method: "POST",
           headers: {
             Accept: "application/json",
@@ -156,17 +193,20 @@
           },
           body: JSON.stringify(payload)
         });
-        const data = await response.json().catch(() => ({}));
-
-        if (!response.ok || data.ok === false) {
+        let data = {};
+        try {
+          data = await response.json();
+        } catch (_) {
+          data = {};
+        }
+        if (!response.ok || data.ok === false || data.success === "false") {
           throw new Error(data.message || "Form submission failed.");
         }
-
         form.reset();
         if (message) {
           message.textContent = form.dataset.successMessage || "Thanks. Your message was sent to the leasing team.";
         }
-      } catch (_) {
+      } catch (error) {
         const fallback = form.dataset.fallbackMessage || "We could not send your message right now. Please call or email the leasing team directly.";
         if (message) message.textContent = fallback;
       } finally {
@@ -177,27 +217,4 @@
       }
     });
   });
-
-  document.querySelectorAll("[data-demo-form]").forEach((form) => {
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const message = form.querySelector("[data-form-message]");
-      form.reset();
-      if (message) {
-        message.textContent = "This preview form is not connected to email delivery yet.";
-      }
-    });
-  });
-
-  if (document.body.classList.contains("site-red-oak-apartments") && !document.querySelector(".mobile-sticky-cta")) {
-    const floorPlansLink = document.querySelector('.nav-list a[href$="floor-plans/"]');
-    const sticky = document.createElement("nav");
-    sticky.className = "mobile-sticky-cta";
-    sticky.setAttribute("aria-label", "Quick leasing actions");
-    sticky.innerHTML = `
-      <a href="tel:8043296249">Call</a>
-      <a href="${floorPlansLink ? floorPlansLink.href : "./floor-plans/"}">Check Availability</a>
-    `;
-    document.body.appendChild(sticky);
-  }
 })();

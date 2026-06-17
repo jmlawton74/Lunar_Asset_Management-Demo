@@ -11,9 +11,9 @@
   <meta property="og:title" content="Contact | Melrose &amp; Silver Apartments">
   <meta property="og:description" content="Melrose &amp; Silver Apartments offers Tulsa, OK apartment access with online application and resident portal links for each included property.">
   <meta property="og:type" content="website">
-  <link rel="stylesheet" href="../assets/styles.css?v=20260616-new-park-polish-v2">
+  <link rel="stylesheet" href="../assets/styles.css?v=20260617-new-park-contact-spacing">
   <style>:root{--color-primary:#31523A;--color-secondary:#C7752A;--color-accent:#5F7C9B;--color-ink:#1F2722;--color-muted:#626E68;--color-paper:#F8F3EB;--color-surface:#FFFFFF;--hero-min-height:430px;--hero-logo-min-height:430px;--hero-min-height-mobile:390px;--hero-logo-min-height-mobile:390px;--hero-padding-y:1.2rem;--hero-padding-y-mobile:1rem;--hero-logo-gap:1.25rem;--hero-logo-gap-mobile:0.4rem;--hero-copy-gap:0.55rem;--hero-logo-max-height:clamp(230px, 30svh, 300px);--hero-logo-max-height-mobile:190px;--section-padding-y:1.65rem;--section-padding-y-mobile:1.35rem;--page-hero-padding-y:1.75rem;--split-gap:1rem;--content-gap:0.65rem;--grid-gap:0.65rem;--gallery-gap:0.65rem;--card-padding:0.75rem;--panel-padding:0.8rem;--feature-strip-padding-y:0.75rem;--feature-item-min-height:54px;--feature-item-padding:0.7rem;--filters-margin-y:0.55rem;--heading-kicker-gap:0.2rem;--section-text-margin:0.45rem 0 0;--card-heading-margin:0.25rem 0 0.45rem;--card-text-margin:0.35rem 0 0;--card-title-margin:0 0 0.25rem;--meta-margin:0 0 0.45rem;--price-margin:0.35rem 0;--action-gap:0.5rem}</style>
-  <script defer src="../assets/app.js?v=20260616-new-park-polish-v2"></script>
+  <script defer src="../assets/app.js?v=20260617-new-park-contact-spacing"></script>
 </head>
 <body class="site-melrose-silver-apartments">
   <a class="skip-link button" href="#main">Skip to content</a>
@@ -64,29 +64,69 @@
       <div class="section-inner contact-options-grid">
         <div class="section-heading">
           <span class="kicker">Schedule or ask a question</span>
-          <h2>Tell the leasing team which property you want</h2>
-          <p>Tours are by appointment. Call or email for current availability, pricing, exact layouts, and property-specific details.</p>
+          <h2>Let the leasing team know which community is right for you.</h2>
           <div class="cta-row">
             <a class="button" href="tel:5398671543">539-867-1543</a>
             <a class="button secondary" href="mailto:Manager@melroseapts.net">Email Leasing</a>
           </div>
         </div>
         <div class="info-panel contact-choice-panel">
-          <h2>Property interest</h2>
-          <p>Mention one of these properties when you reach out.</p>
-          <div class="contact-choice-list">
 
-    <a class="contact-choice" href="mailto:Manager@melroseapts.net?subject=Melrose%20Apartments%20leasing%20question&amp;body=Hello%2C%0A%0AI%20am%20interested%20in%20Melrose%20Apartments%20at%206321%20E%209th%20Street%2C%20Tulsa%2C%20OK%2074112.%0APlease%20send%20current%20availability%2C%20pricing%2C%20tour%20options%2C%20and%20any%20property-specific%20details.%0A%0AThank%20you.">
-      <span>Melrose Apartments</span>
-      <small>6321 E 9th Street, Tulsa, OK 74112</small>
-    </a>
+    <form class="form contact-form-compact" name="contact" method="post" action="https://lunar-asset-management-new-park.vercel.app/api/contact/" data-submit-endpoint="https://lunar-asset-management-new-park.vercel.app/api/contact/" data-contact-form data-success-message="Thanks. Your message was sent to the Melrose &amp; Silver Apartments leasing team." data-fallback-message="We could not send your message right now. Please call 539-867-1543 or email Manager@melroseapts.net.">
+      <input type="hidden" name="form-name" value="contact">
+      <input type="hidden" name="property" value="melrose-silver-apartments">
+      <input type="hidden" name="_subject" value="Melrose &amp; Silver Apartments website inquiry">
+      <input type="text" name="website" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
 
-    <a class="contact-choice" href="mailto:Manager@melroseapts.net?subject=Silver%20Apartments%20leasing%20question&amp;body=Hello%2C%0A%0AI%20am%20interested%20in%20Silver%20Apartments%20at%202507%2087th%20Ave%20E%2C%20Tulsa%2C%20OK%2074113.%0APlease%20send%20current%20availability%2C%20pricing%2C%20tour%20options%2C%20and%20any%20property-specific%20details.%0A%0AThank%20you.">
-      <span>Silver Apartments</span>
-      <small>2507 87th Ave E, Tulsa, OK 74113</small>
-    </a>
+      <label class="field">Property interest
+        <select name="property-interest">
+          <option value="">Select</option>
+          <option value="Melrose Apartments">Melrose Apartments</option><option value="Silver Apartments">Silver Apartments</option>
+        </select>
+      </label>
 
-          </div>
+      <div class="form-row">
+
+    <label class="field">First name
+      <input name="first-name" type="text" required>
+    </label>
+
+
+    <label class="field">Last name
+      <input name="last-name" type="text" required>
+    </label>
+
+      </div>
+      <div class="form-row">
+
+    <label class="field">Email
+      <input name="email" type="email" required>
+    </label>
+
+
+    <label class="field">Phone
+      <input name="phone" type="tel">
+    </label>
+
+      </div>
+      <div class="form-row">
+        <label class="field">Preferred move-in
+          <input name="move-in" type="date">
+        </label>
+        <label class="field">Bedrooms
+          <select name="bedrooms">
+            <option value="">Select</option>
+            <option>1 Bedroom</option><option>2 Bedroom</option>
+          </select>
+        </label>
+      </div>
+      <label class="field">Message
+        <textarea name="message" placeholder="Tell us what you are looking for." required></textarea>
+      </label>
+      <button class="button" type="submit">Send Message</button>
+      <p class="meta" data-form-message aria-live="polite"></p>
+    </form>
+
         </div>
       </div>
     </section>

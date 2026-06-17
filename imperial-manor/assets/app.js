@@ -23,6 +23,38 @@
     });
   });
 
+  document.querySelectorAll("[data-gallery-filter]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const value = button.dataset.galleryFilter;
+      document.querySelectorAll("[data-gallery-filter]").forEach((item) => {
+        item.setAttribute("aria-pressed", String(item === button));
+      });
+      document.querySelectorAll("[data-gallery-group]").forEach((group) => {
+        group.toggleAttribute("hidden", group.dataset.galleryGroup !== value);
+      });
+    });
+  });
+
+  document.querySelectorAll("[data-property-gallery-open]").forEach((trigger) => {
+    trigger.addEventListener("click", (event) => {
+      const interactive = event.target.closest("a, input, select, textarea");
+      if (interactive && interactive !== trigger) return;
+
+      const dialog = document.querySelector(`[data-property-gallery-dialog="${trigger.dataset.propertyGalleryOpen}"]`);
+      if (dialog) dialog.showModal();
+    });
+  });
+
+  document.querySelectorAll("[data-property-gallery-dialog]").forEach((dialog) => {
+    dialog.querySelectorAll("[data-property-gallery-close]").forEach((close) => {
+      close.addEventListener("click", () => dialog.close());
+    });
+
+    dialog.addEventListener("click", (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+  });
+
   const lightbox = document.querySelector("[data-lightbox]");
   if (lightbox) {
     const image = lightbox.querySelector("[data-lightbox-image]");
@@ -131,6 +163,57 @@
       form.reset();
       if (message) {
         message.textContent = "Thanks. Your message was recorded for this preview. Connect the form before launch so it sends to the leasing team.";
+      }
+    });
+  });
+
+  document.querySelectorAll("[data-contact-form]").forEach((form) => {
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const message = form.querySelector("[data-form-message]");
+      const submitButton = form.querySelector("button[type='submit']");
+      const originalButtonText = submitButton ? submitButton.textContent : "";
+
+      if (message) message.textContent = "Sending your message...";
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
+      }
+
+      try {
+        const formData = new FormData(form);
+        formData.set("source-url", window.location.href);
+        const payload = Object.fromEntries(formData.entries());
+        const response = await fetch(form.dataset.submitEndpoint || form.action, {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(payload)
+        });
+        let data = {};
+        try {
+          data = await response.json();
+        } catch (_) {
+          data = {};
+        }
+        if (!response.ok || data.ok === false || data.success === "false") {
+          throw new Error(data.message || "Form submission failed.");
+        }
+        form.reset();
+        if (message) {
+          message.textContent = form.dataset.successMessage || "Thanks. Your message was sent to the leasing team.";
+        }
+      } catch (error) {
+        const fallback = form.dataset.fallbackMessage || "We could not send your message right now. Please call or email the leasing team directly.";
+        if (message) message.textContent = fallback;
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = originalButtonText;
+        }
       }
     });
   });

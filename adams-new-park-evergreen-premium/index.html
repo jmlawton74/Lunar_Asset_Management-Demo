@@ -153,31 +153,62 @@
           </div>
         </div>
         <div class="info-panel contact-choice-panel">
-          <h2>Property interest</h2>
-          <p>Mention one of these properties when you reach out.</p>
-          <div class="contact-choice-list">
 
-    <a class="contact-choice" href="mailto:Manager@newparkapt.net?subject=New%20Park%20Apartments%20leasing%20question&amp;body=Hello%2C%0A%0AI%20am%20interested%20in%20New%20Park%20Apartments%20at%20359%20New%20Park%20Avenue%2C%20Hartford%2C%20CT%2006106.%0APlease%20send%20current%20availability%2C%20pricing%2C%20tour%20options%2C%20and%20any%20property-specific%20details.%0A%0AThank%20you.">
-      <span>New Park Apartments</span>
-      <small>359 New Park Avenue, Hartford, CT 06106</small>
-    </a>
+    <form class="form contact-form-compact" name="contact" method="post" action="https://lunar-asset-management-new-park.vercel.app/api/contact/" data-submit-endpoint="https://lunar-asset-management-new-park.vercel.app/api/contact/" data-contact-form data-success-message="Thanks. Your message was sent to the New Park Apartments leasing team." data-fallback-message="We could not send your message right now. Please call 860-937-5835 or email Manager@newparkapt.net.">
+      <input type="hidden" name="form-name" value="contact">
+      <input type="hidden" name="property" value="adams-new-park-evergreen-premium">
+      <input type="hidden" name="_subject" value="New Park Apartments website inquiry">
+      <input type="text" name="website" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
 
-    <a class="contact-choice" href="mailto:Manager@newparkapt.net?subject=Premium%20Apartments%20leasing%20question&amp;body=Hello%2C%0A%0AI%20am%20interested%20in%20Premium%20Apartments%20at%20249%20New%20Britain%20Avenue%2C%20Hartford%2C%20CT%2006106.%0APlease%20send%20current%20availability%2C%20pricing%2C%20tour%20options%2C%20and%20any%20property-specific%20details.%0A%0AThank%20you.">
-      <span>Premium Apartments</span>
-      <small>249 New Britain Avenue, Hartford, CT 06106</small>
-    </a>
+      <label class="field">Property interest
+        <select name="property-interest">
+          <option value="">Select</option>
+          <option value="New Park Apartments">New Park Apartments</option><option value="Premium Apartments">Premium Apartments</option><option value="Evergreen Apartments">Evergreen Apartments</option><option value="Adams Apartments">Adams Apartments</option>
+        </select>
+      </label>
 
-    <a class="contact-choice" href="mailto:Manager@newparkapt.net?subject=Evergreen%20Apartments%20leasing%20question&amp;body=Hello%2C%0A%0AI%20am%20interested%20in%20Evergreen%20Apartments%20at%2061%20Evergreen%20Avenue%2C%20Hartford%2C%20CT%2006105.%0APlease%20send%20current%20availability%2C%20pricing%2C%20tour%20options%2C%20and%20any%20property-specific%20details.%0A%0AThank%20you.">
-      <span>Evergreen Apartments</span>
-      <small>61 Evergreen Avenue, Hartford, CT 06105</small>
-    </a>
+      <div class="form-row">
 
-    <a class="contact-choice" href="mailto:Manager@newparkapt.net?subject=Adams%20Apartments%20leasing%20question&amp;body=Hello%2C%0A%0AI%20am%20interested%20in%20Adams%20Apartments%20at%2069-75%20James%20Street%2C%20Hartford%2C%20CT%2006106.%0APlease%20send%20current%20availability%2C%20pricing%2C%20tour%20options%2C%20and%20any%20property-specific%20details.%0A%0AThank%20you.">
-      <span>Adams Apartments</span>
-      <small>69-75 James Street, Hartford, CT 06106</small>
-    </a>
+    <label class="field">First name
+      <input name="first-name" type="text" required>
+    </label>
 
-          </div>
+
+    <label class="field">Last name
+      <input name="last-name" type="text" required>
+    </label>
+
+      </div>
+      <div class="form-row">
+
+    <label class="field">Email
+      <input name="email" type="email" required>
+    </label>
+
+
+    <label class="field">Phone
+      <input name="phone" type="tel">
+    </label>
+
+      </div>
+      <div class="form-row">
+        <label class="field">Preferred move-in
+          <input name="move-in" type="date">
+        </label>
+        <label class="field">Bedrooms
+          <select name="bedrooms">
+            <option value="">Select</option>
+            <option>1-2 Bedroom</option><option>2-3 Bedroom</option>
+          </select>
+        </label>
+      </div>
+      <label class="field">Message
+        <textarea name="message" placeholder="Tell us what you are looking for." required></textarea>
+      </label>
+      <button class="button" type="submit">Send Message</button>
+      <p class="meta" data-form-message aria-live="polite"></p>
+    </form>
+
         </div>
       </div>
     </section>

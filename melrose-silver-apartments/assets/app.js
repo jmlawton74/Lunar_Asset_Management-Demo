@@ -35,6 +35,26 @@
     });
   });
 
+  document.querySelectorAll("[data-property-gallery-open]").forEach((trigger) => {
+    trigger.addEventListener("click", (event) => {
+      const interactive = event.target.closest("a, input, select, textarea");
+      if (interactive && interactive !== trigger) return;
+
+      const dialog = document.querySelector(`[data-property-gallery-dialog="${trigger.dataset.propertyGalleryOpen}"]`);
+      if (dialog) dialog.showModal();
+    });
+  });
+
+  document.querySelectorAll("[data-property-gallery-dialog]").forEach((dialog) => {
+    dialog.querySelectorAll("[data-property-gallery-close]").forEach((close) => {
+      close.addEventListener("click", () => dialog.close());
+    });
+
+    dialog.addEventListener("click", (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+  });
+
   const lightbox = document.querySelector("[data-lightbox]");
   if (lightbox) {
     const image = lightbox.querySelector("[data-lightbox-image]");
@@ -149,20 +169,29 @@
 
   document.querySelectorAll("[data-contact-form]").forEach((form) => {
     form.addEventListener("submit", async (event) => {
-      if (form.dataset.directSubmit === "true") return;
       event.preventDefault();
 
       const message = form.querySelector("[data-form-message]");
       const submitButton = form.querySelector("button[type='submit']");
+      const originalButtonText = submitButton ? submitButton.textContent : "";
 
       if (message) message.textContent = "Sending your message...";
-      if (submitButton) submitButton.disabled = true;
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
+      }
 
       try {
+        const formData = new FormData(form);
+        formData.set("source-url", window.location.href);
+        const payload = Object.fromEntries(formData.entries());
         const response = await fetch(form.dataset.submitEndpoint || form.action, {
-          method: form.method || "POST",
-          headers: { Accept: "application/json" },
-          body: new FormData(form)
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(payload)
         });
         let data = {};
         try {
@@ -170,20 +199,20 @@
         } catch (_) {
           data = {};
         }
-        if (!response.ok || data.success === "false") {
+        if (!response.ok || data.ok === false || data.success === "false") {
           throw new Error(data.message || "Form submission failed.");
         }
         form.reset();
         if (message) {
-          message.textContent = "Thanks. Your message was sent to the Imperial Manor leasing team.";
+          message.textContent = form.dataset.successMessage || "Thanks. Your message was sent to the leasing team.";
         }
-      } catch (_) {
-        if (message) message.textContent = "Opening secure form delivery...";
-        form.dataset.directSubmit = "true";
-        HTMLFormElement.prototype.submit.call(form);
+      } catch (error) {
+        const fallback = form.dataset.fallbackMessage || "We could not send your message right now. Please call or email the leasing team directly.";
+        if (message) message.textContent = fallback;
       } finally {
-        if (submitButton && form.dataset.directSubmit !== "true") {
+        if (submitButton) {
           submitButton.disabled = false;
+          submitButton.textContent = originalButtonText;
         }
       }
     });

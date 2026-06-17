@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="../assets/styles.css?v=20260603-imperial-density-v3">
   <style>:root{--color-primary:#32124F;--color-secondary:#D8AF4F;--color-accent:#6F4A8E;--color-ink:#201A24;--color-muted:#685E6F;--color-paper:#FAF7F2;--color-surface:#FFFFFF;--hero-overlay:none;--hero-min-height:430px;--hero-logo-min-height:430px;--hero-min-height-mobile:390px;--hero-logo-min-height-mobile:390px;--hero-padding-y:1.2rem;--hero-padding-y-mobile:1rem;--hero-logo-gap:1.25rem;--hero-logo-gap-mobile:0.4rem;--hero-copy-gap:0.55rem;--hero-logo-max-height:clamp(260px, 35svh, 330px);--hero-logo-max-height-mobile:205px;--section-padding-y:1.65rem;--section-padding-y-mobile:1.35rem;--page-hero-padding-y:1.75rem;--split-gap:1rem;--content-gap:0.65rem;--grid-gap:0.65rem;--gallery-gap:0.65rem;--card-padding:0.75rem;--panel-padding:0.8rem;--feature-strip-padding-y:0.75rem;--feature-item-min-height:54px;--feature-item-padding:0.7rem;--filters-margin-y:0.55rem;--heading-kicker-gap:0.2rem;--section-text-margin:0.45rem 0 0;--card-heading-margin:0.25rem 0 0.45rem;--card-text-margin:0.35rem 0 0;--card-title-margin:0 0 0.25rem;--meta-margin:0 0 0.45rem;--price-margin:0.35rem 0;--action-gap:0.5rem}</style>
-  <script defer src="../assets/app.js?v=20260603-imperial-density-v3"></script>
+  <script defer src="../assets/app.js?v=20260617-contact-routing"></script>
 </head>
 <body>
   <a class="skip-link button" href="#main">Skip to content</a>
@@ -59,8 +59,10 @@
     
     <section class="section">
       <div class="section-inner contact-grid">
-        <form class="form" name="contact" method="post" data-demo-form>
+        <form class="form" name="contact" method="post" action="https://lunar-asset-management-new-park.vercel.app/api/contact/" data-submit-endpoint="https://lunar-asset-management-new-park.vercel.app/api/contact/" data-contact-form data-success-message="Thanks. Your message was sent to the Imperial Manor Apartments leasing team." data-fallback-message="We could not send your message right now. Please call 313-246-6385 or email Leasing@imperialapt.net.">
           <input type="hidden" name="form-name" value="contact">
+          <input type="hidden" name="property" value="imperial-manor">
+          <input type="hidden" name="_subject" value="Imperial Manor Apartments website inquiry">
           <div class="form-row">
             
     <label class="field">First name
@@ -97,7 +99,7 @@
             </label>
           </div>
           <label class="field">Message
-            <textarea name="message" placeholder="Tell us what you are looking for."></textarea>
+            <textarea name="message" placeholder="Tell us what you are looking for." required></textarea>
           </label>
           <button class="button" type="submit">Send Message</button>
           <p class="meta" data-form-message aria-live="polite"></p>
