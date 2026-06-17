@@ -38,6 +38,11 @@ a {
   color: inherit;
 }
 
+:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--color-secondary), white 12%);
+  outline-offset: 3px;
+}
+
 button,
 input,
 select,
@@ -74,6 +79,7 @@ textarea {
 .gallery-button,
 .media-button,
 .card-photo-button,
+.property-link-image,
 .filter-button {
   transition: background 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
 }
@@ -583,6 +589,24 @@ textarea {
   padding: var(--card-padding, 1.25rem);
 }
 
+.property-link-image {
+  aspect-ratio: 4 / 3;
+  background: transparent;
+  border: 0;
+  border-radius: var(--radius);
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+}
+
+.property-link-image img {
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--photo-position, center center);
+  width: 100%;
+}
+
 .property-link-card h3 {
   color: var(--color-primary);
   font-size: 1.15rem;
@@ -593,6 +617,17 @@ textarea {
 .property-link-card p {
   color: var(--color-muted);
   margin: 0;
+}
+
+.property-link-card .property-summary {
+  color: var(--color-ink);
+  font-size: 0.94rem;
+}
+
+.card .property-summary {
+  color: var(--color-muted);
+  font-weight: 700;
+  margin: 0.55rem 0 0;
 }
 
 .property-link-card .card-actions {
@@ -682,6 +717,48 @@ textarea {
   margin: var(--meta-margin, 0 0 0.9rem);
 }
 
+.floor-plan-meta {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  list-style: none;
+  margin: 0.85rem 0;
+  padding: 0;
+}
+
+.floor-plan-meta li {
+  background: color-mix(in srgb, var(--color-primary), transparent 94%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  display: grid;
+  gap: 0.1rem;
+  min-height: 58px;
+  padding: 0.55rem 0.65rem;
+}
+
+.floor-plan-meta span {
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.floor-plan-meta strong {
+  color: var(--color-primary);
+  font-size: 0.98rem;
+  line-height: 1.2;
+}
+
+.floor-plan-note {
+  background: color-mix(in srgb, var(--color-secondary), white 88%);
+  border: 1px solid color-mix(in srgb, var(--color-secondary), transparent 58%);
+  border-radius: var(--radius);
+  color: var(--color-ink);
+  font-weight: 700;
+  margin: 1rem 0 0;
+  padding: 0.85rem 1rem;
+}
+
 .price {
   color: var(--color-primary);
   font-size: 1.05rem;
@@ -737,6 +814,127 @@ textarea {
   max-width: 1180px;
 }
 
+.gallery-group {
+  margin-top: 2rem;
+}
+
+.gallery-group:first-of-type {
+  margin-top: 1.25rem;
+}
+
+.gallery-group-heading {
+  align-items: baseline;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.55rem;
+}
+
+.gallery-group-heading h3 {
+  color: var(--color-primary);
+  font-size: 1.35rem;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.gallery-group-heading span {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.gallery-preview-grid,
+.convenience-grid {
+  display: grid;
+  gap: var(--grid-gap, 1.25rem);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 1.25rem;
+}
+
+.gallery-preview-card,
+.convenience-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.gallery-preview-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.gallery-preview-card .media-button img {
+  aspect-ratio: 4 / 3;
+}
+
+.gallery-preview-card div,
+.convenience-card {
+  padding: var(--card-padding, 1.25rem);
+}
+
+.gallery-preview-card h3,
+.convenience-card h3 {
+  color: var(--color-primary);
+  font-size: 1.12rem;
+  line-height: 1.2;
+  margin: 0 0 0.35rem;
+}
+
+.gallery-preview-card p,
+.convenience-card p {
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.gallery-group[hidden] {
+  display: none;
+}
+
+.gallery-group + .gallery-group {
+  margin-top: 1.5rem;
+}
+
+.convenience-card {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.feature-token {
+  align-items: center;
+  background: color-mix(in srgb, var(--color-secondary), white 80%);
+  border: 1px solid color-mix(in srgb, var(--color-secondary), transparent 58%);
+  border-radius: 999px;
+  color: var(--color-primary);
+  display: inline-flex;
+  font-size: 0.82rem;
+  font-weight: 900;
+  height: 2rem;
+  justify-content: center;
+  width: 2rem;
+}
+
+.credibility-section {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--color-primary), black 12%), var(--color-primary));
+  color: #fff;
+}
+
+.credibility-section .section-heading p,
+.credibility-section .meta {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.credibility-section .kicker {
+  color: color-mix(in srgb, var(--color-secondary), white 16%);
+}
+
+.credibility-panel {
+  border-color: rgba(255, 255, 255, 0.26);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.18);
+}
+
 .gallery-button,
 .media-button,
 .card-photo-button {
@@ -755,7 +953,9 @@ textarea {
 .media-button:hover,
 .media-button:focus-visible,
 .card-photo-button:hover,
-.card-photo-button:focus-visible {
+.card-photo-button:focus-visible,
+.property-link-image:hover,
+.property-link-image:focus-visible {
   transform: translateY(-2px);
 }
 
@@ -840,6 +1040,54 @@ textarea {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.contact-options-grid {
+  align-items: start;
+  display: grid;
+  gap: var(--split-gap, 2rem);
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+}
+
+.contact-choice-panel h2 {
+  color: var(--color-primary);
+  font-size: 1.35rem;
+  margin: 0 0 0.35rem;
+}
+
+.contact-choice-panel p {
+  color: var(--color-muted);
+  margin-top: 0;
+}
+
+.contact-choice-list {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.contact-choice {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  color: var(--color-primary);
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.75rem;
+  text-decoration: none;
+}
+
+.contact-choice:hover,
+.contact-choice:focus-visible {
+  background: color-mix(in srgb, var(--color-primary), transparent 92%);
+  border-color: var(--color-primary);
+}
+
+.contact-choice span {
+  font-weight: 800;
+}
+
+.contact-choice small {
+  color: var(--color-muted);
+  font-size: 0.83rem;
 }
 
 body.site-red-oak-apartments {
@@ -1277,6 +1525,7 @@ body.site-red-oak-apartments {
 
   .split,
   .split.reverse,
+  .contact-options-grid,
   .contact-grid,
   .footer-inner,
   .lifestyle-grid {
@@ -1288,6 +1537,8 @@ body.site-red-oak-apartments {
   }
 
   .card-grid,
+  .convenience-grid,
+  .gallery-preview-grid,
   .gallery-grid,
   .list-columns,
   .property-link-grid,
@@ -1426,12 +1677,31 @@ body.site-red-oak-apartments {
 
   .feature-list,
   .card-grid,
+  .convenience-grid,
+  .gallery-preview-grid,
   .gallery-grid,
   .list-columns,
+  .contact-options-grid,
   .property-link-grid,
   .neighborhood-grid,
   .form-row {
     grid-template-columns: 1fr;
+  }
+
+  .hero-actions .button,
+  .card-actions .button,
+  .card-actions .text-link {
+    width: 100%;
+  }
+
+  .floor-plan-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-group-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.25rem;
   }
 
   .header-actions .button {

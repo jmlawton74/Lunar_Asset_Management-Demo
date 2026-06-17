@@ -624,6 +624,12 @@ textarea {
   font-size: 0.94rem;
 }
 
+.card .property-summary {
+  color: var(--color-muted);
+  font-weight: 700;
+  margin: 0.55rem 0 0;
+}
+
 .property-link-card .card-actions {
   margin-top: auto;
 }
@@ -881,6 +887,14 @@ textarea {
 .convenience-card p {
   color: var(--color-muted);
   margin: 0;
+}
+
+.gallery-group[hidden] {
+  display: none;
+}
+
+.gallery-group + .gallery-group {
+  margin-top: 1.5rem;
 }
 
 .convenience-card {

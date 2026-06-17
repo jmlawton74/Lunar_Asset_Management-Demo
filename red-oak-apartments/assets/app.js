@@ -178,6 +178,17 @@
     });
   });
 
+  document.querySelectorAll("[data-demo-form]").forEach((form) => {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const message = form.querySelector("[data-form-message]");
+      form.reset();
+      if (message) {
+        message.textContent = "This preview form is not connected to email delivery yet.";
+      }
+    });
+  });
+
   if (document.body.classList.contains("site-red-oak-apartments") && !document.querySelector(".mobile-sticky-cta")) {
     const floorPlansLink = document.querySelector('.nav-list a[href$="floor-plans/"]');
     const sticky = document.createElement("nav");

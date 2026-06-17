@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://adams-new-park-evergreen-premium.vercel.app/sitemap.xml

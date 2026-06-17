@@ -134,46 +134,4 @@
       }
     });
   });
-
-  document.querySelectorAll("[data-contact-form]").forEach((form) => {
-    form.addEventListener("submit", async (event) => {
-      if (form.dataset.directSubmit === "true") return;
-      event.preventDefault();
-
-      const message = form.querySelector("[data-form-message]");
-      const submitButton = form.querySelector("button[type='submit']");
-
-      if (message) message.textContent = "Sending your message...";
-      if (submitButton) submitButton.disabled = true;
-
-      try {
-        const response = await fetch(form.dataset.submitEndpoint || form.action, {
-          method: form.method || "POST",
-          headers: { Accept: "application/json" },
-          body: new FormData(form)
-        });
-        let data = {};
-        try {
-          data = await response.json();
-        } catch (_) {
-          data = {};
-        }
-        if (!response.ok || data.success === "false") {
-          throw new Error(data.message || "Form submission failed.");
-        }
-        form.reset();
-        if (message) {
-          message.textContent = "Thanks. Your message was sent to the Imperial Manor leasing team.";
-        }
-      } catch (_) {
-        if (message) message.textContent = "Opening secure form delivery...";
-        form.dataset.directSubmit = "true";
-        HTMLFormElement.prototype.submit.call(form);
-      } finally {
-        if (submitButton && form.dataset.directSubmit !== "true") {
-          submitButton.disabled = false;
-        }
-      }
-    });
-  });
 })();
