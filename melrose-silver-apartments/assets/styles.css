@@ -80,7 +80,8 @@ textarea {
 .media-button,
 .card-photo-button,
 .property-link-image,
-.filter-button {
+.filter-button,
+.gallery-preview-card {
   transition: background 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
 }
 
@@ -862,30 +863,62 @@ textarea {
 }
 
 .gallery-preview-card {
+  appearance: none;
+  color: inherit;
+  cursor: pointer;
   display: grid;
+  font: inherit;
   grid-template-rows: auto 1fr;
+  padding: 0;
+  text-align: left;
+  width: 100%;
 }
 
-.gallery-preview-card .media-button img {
+.gallery-preview-card:hover,
+.gallery-preview-card:focus-visible {
+  border-color: rgba(13, 100, 115, 0.4);
+  transform: translateY(-2px);
+}
+
+.gallery-preview-card:focus-visible {
+  outline: 3px solid rgba(185, 132, 53, 0.55);
+  outline-offset: 3px;
+}
+
+.gallery-preview-image {
+  background: #f7f2ea;
+  display: block;
+  overflow: hidden;
+}
+
+.gallery-preview-image img {
   aspect-ratio: 4 / 3;
+  display: block;
+  height: 100%;
+  object-fit: var(--photo-fit, cover);
+  object-position: var(--photo-position, center center);
+  width: 100%;
 }
 
-.gallery-preview-card div,
+.gallery-preview-body,
 .convenience-card {
   padding: var(--card-padding, 1.25rem);
 }
 
-.gallery-preview-card h3,
+.gallery-preview-title,
 .convenience-card h3 {
   color: var(--color-primary);
+  display: block;
   font-size: 1.12rem;
+  font-weight: 800;
   line-height: 1.2;
   margin: 0 0 0.35rem;
 }
 
-.gallery-preview-card p,
+.gallery-preview-count,
 .convenience-card p {
   color: var(--color-muted);
+  display: block;
   margin: 0;
 }
 
@@ -895,6 +928,59 @@ textarea {
 
 .gallery-group + .gallery-group {
   margin-top: 1.5rem;
+}
+
+.property-gallery-dialog {
+  background: transparent;
+  border: 0;
+  max-height: min(88vh, 920px);
+  max-width: min(1120px, 94vw);
+  padding: 0;
+  width: min(1120px, 94vw);
+}
+
+.property-gallery-dialog::backdrop {
+  background: rgba(13, 29, 33, 0.72);
+}
+
+.property-gallery-window {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
+  display: grid;
+  gap: 1rem;
+  max-height: min(88vh, 920px);
+  overflow: hidden;
+  padding: clamp(1rem, 2vw, 1.45rem);
+}
+
+.property-gallery-header {
+  align-items: flex-start;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding-bottom: 0.85rem;
+}
+
+.property-gallery-header h2 {
+  color: var(--color-primary);
+  font-size: clamp(1.65rem, 3vw, 2.4rem);
+  line-height: 1.05;
+  margin: 0.2rem 0 0;
+}
+
+.property-gallery-header p {
+  color: var(--color-muted);
+  margin: 0.3rem 0 0;
+}
+
+.property-gallery-grid {
+  display: grid;
+  gap: var(--gallery-gap, 1rem);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  overflow: auto;
+  padding: 0.1rem 0.15rem 0.35rem 0;
 }
 
 .convenience-card {
@@ -1047,6 +1133,19 @@ textarea {
   display: grid;
   gap: var(--split-gap, 2rem);
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+}
+
+.contact-options-section .section-heading h2 {
+  line-height: 1.12;
+  overflow-wrap: anywhere;
+}
+
+.contact-options-section .section-heading .cta-row {
+  margin-top: clamp(1rem, 2vw, 1.45rem);
+}
+
+.contact-options-section .cta-row .button {
+  flex: 0 1 auto;
 }
 
 .contact-choice-panel h2 {
@@ -1539,6 +1638,7 @@ body.site-red-oak-apartments {
   .card-grid,
   .convenience-grid,
   .gallery-preview-grid,
+  .property-gallery-grid,
   .gallery-grid,
   .list-columns,
   .property-link-grid,
@@ -1679,6 +1779,7 @@ body.site-red-oak-apartments {
   .card-grid,
   .convenience-grid,
   .gallery-preview-grid,
+  .property-gallery-grid,
   .gallery-grid,
   .list-columns,
   .contact-options-grid,
@@ -1702,6 +1803,11 @@ body.site-red-oak-apartments {
     align-items: flex-start;
     flex-direction: column;
     gap: 0.25rem;
+  }
+
+  .property-gallery-header {
+    align-items: stretch;
+    flex-direction: column;
   }
 
   .header-actions .button {
