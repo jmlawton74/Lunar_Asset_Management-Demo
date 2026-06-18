@@ -1,10 +1,10 @@
 :root {
-  --color-primary: #275142;
-  --color-secondary: #c9852b;
-  --color-accent: #7a9e7e;
-  --color-ink: #1d2521;
-  --color-muted: #66736d;
-  --color-paper: #faf7f0;
+  --color-primary: #2f3f3d;
+  --color-secondary: #c47a4f;
+  --color-accent: #6b7f74;
+  --color-ink: #24312f;
+  --color-muted: #5e6b66;
+  --color-paper: #f2efe8;
   --color-surface: #ffffff;
   --color-border: color-mix(in srgb, var(--color-primary), transparent 82%);
   --shadow: 0 18px 48px rgba(20, 28, 25, 0.14);
@@ -1189,6 +1189,171 @@ textarea {
   font-size: 0.83rem;
 }
 
+body.site-melrose-silver-apartments {
+  background:
+    radial-gradient(circle at top left, rgba(216, 198, 166, 0.24), transparent 34rem),
+    linear-gradient(180deg, #f2efe8 0%, #ffffff 52%, #efe7da 100%);
+}
+
+.site-melrose-silver-apartments .topbar {
+  background: #263634;
+  border-bottom: 1px solid rgba(216, 198, 166, 0.32);
+  color: #f2efe8;
+}
+
+.site-melrose-silver-apartments .site-header {
+  background: #2f3f3d;
+  border-bottom: 1px solid rgba(216, 198, 166, 0.3);
+  box-shadow: 0 16px 34px rgba(24, 34, 32, 0.22);
+}
+
+.site-melrose-silver-apartments .header-inner {
+  min-height: 92px;
+}
+
+.site-melrose-silver-apartments .brand {
+  flex: 0 1 300px;
+}
+
+.site-melrose-silver-apartments .brand-logo {
+  background: transparent;
+  border-radius: 0;
+  filter: drop-shadow(0 12px 22px rgba(12, 20, 18, 0.2));
+  flex: 0 0 auto;
+}
+
+.site-melrose-silver-apartments .brand-text {
+  display: none;
+}
+
+.site-melrose-silver-apartments .nav-list {
+  gap: 0.7rem;
+}
+
+.site-melrose-silver-apartments .nav-list a {
+  color: #f2efe8;
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.site-melrose-silver-apartments .nav-list a:hover,
+.site-melrose-silver-apartments .nav-list a:focus-visible,
+.site-melrose-silver-apartments .nav-list a[aria-current="page"] {
+  color: #d8c6a6;
+}
+
+.site-melrose-silver-apartments .nav-toggle {
+  border-color: rgba(216, 198, 166, 0.45);
+  color: #f2efe8;
+}
+
+.site-melrose-silver-apartments .header-actions {
+  gap: 0.55rem;
+}
+
+.site-melrose-silver-apartments .header-actions .button {
+  background: #d8c6a6;
+  border-color: #d8c6a6;
+  box-shadow: none;
+  color: #2f3f3d;
+  font-size: 0.88rem;
+  min-height: 42px;
+  padding: 0.66rem 0.78rem;
+}
+
+.site-melrose-silver-apartments .header-actions .button:hover,
+.site-melrose-silver-apartments .header-actions .button:focus-visible {
+  background: #f2efe8;
+  border-color: #f2efe8;
+}
+
+.site-melrose-silver-apartments .header-actions .button.secondary {
+  background: transparent;
+  border-color: rgba(216, 198, 166, 0.72);
+  color: #f2efe8;
+}
+
+.site-melrose-silver-apartments .header-actions .button.secondary:hover,
+.site-melrose-silver-apartments .header-actions .button.secondary:focus-visible {
+  background: rgba(216, 198, 166, 0.14);
+  border-color: #d8c6a6;
+  color: #ffffff;
+}
+
+.site-melrose-silver-apartments .button {
+  background: #2f3f3d;
+  border-color: #2f3f3d;
+}
+
+.site-melrose-silver-apartments .button:hover,
+.site-melrose-silver-apartments .button:focus-visible {
+  background: #8b5b43;
+  border-color: #8b5b43;
+}
+
+.site-melrose-silver-apartments .button.secondary {
+  background: transparent;
+  border-color: rgba(47, 63, 61, 0.55);
+  color: #2f3f3d;
+}
+
+.site-melrose-silver-apartments .button.secondary:hover,
+.site-melrose-silver-apartments .button.secondary:focus-visible {
+  background: #2f3f3d;
+  border-color: #2f3f3d;
+  color: #ffffff;
+}
+
+.site-melrose-silver-apartments .hero {
+  border-bottom: 6px solid #c47a4f;
+}
+
+.site-melrose-silver-apartments .hero > img {
+  filter: brightness(1.08) saturate(1.05) contrast(1.02);
+}
+
+.site-melrose-silver-apartments .hero-copy {
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.52);
+}
+
+.site-melrose-silver-apartments .hero .button.secondary {
+  background: rgba(47, 63, 61, 0.66);
+  border-color: rgba(242, 239, 232, 0.76);
+  color: #ffffff;
+}
+
+.site-melrose-silver-apartments .hero .button.secondary:hover,
+.site-melrose-silver-apartments .hero .button.secondary:focus-visible {
+  background: #f2efe8;
+  border-color: #f2efe8;
+  color: #2f3f3d;
+}
+
+.site-melrose-silver-apartments .feature-strip,
+.site-melrose-silver-apartments footer {
+  background: #2f3f3d;
+}
+
+.site-melrose-silver-apartments .page-logo {
+  max-height: 118px;
+  max-width: min(390px, 78vw);
+}
+
+.site-melrose-silver-apartments .property-link-card,
+.site-melrose-silver-apartments .card,
+.site-melrose-silver-apartments .info-panel,
+.site-melrose-silver-apartments .lifestyle-card {
+  border-color: rgba(47, 63, 61, 0.16);
+}
+
+.site-melrose-silver-apartments .contact-choice:hover,
+.site-melrose-silver-apartments .contact-choice:focus-visible,
+.site-melrose-silver-apartments .filter-button:hover,
+.site-melrose-silver-apartments .filter-button:focus-visible,
+.site-melrose-silver-apartments .filter-button[aria-pressed="true"] {
+  background: rgba(216, 198, 166, 0.24);
+}
+
 body.site-red-oak-apartments {
   background:
     radial-gradient(circle at top left, rgba(176, 133, 78, 0.18), transparent 34rem),
@@ -1622,6 +1787,22 @@ body.site-red-oak-apartments {
     width: var(--header-logo-tablet-width, 76px);
   }
 
+  .site-melrose-silver-apartments .header-inner {
+    min-height: 0;
+  }
+
+  .site-melrose-silver-apartments .brand {
+    flex: 1 1 auto;
+  }
+
+  .site-melrose-silver-apartments .nav-list {
+    border-top-color: rgba(216, 198, 166, 0.34);
+  }
+
+  .site-melrose-silver-apartments .header-actions .button {
+    min-height: 44px;
+  }
+
   .split,
   .split.reverse,
   .contact-options-grid,
@@ -1682,6 +1863,14 @@ body.site-red-oak-apartments {
   .brand-logo {
     height: var(--header-logo-mobile-height, 68px);
     width: var(--header-logo-mobile-width, 68px);
+  }
+
+  .site-melrose-silver-apartments .brand-logo {
+    max-width: 100%;
+  }
+
+  .site-melrose-silver-apartments .header-actions {
+    grid-template-columns: 1fr;
   }
 
   .nav-toggle {

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Melrose &amp; Silver Apartments icon</title>
+  <desc id="desc">Dark green app icon with Melrose and Silver line-art apartment buildings and leaves.</desc>
+  <rect width="512" height="512" rx="92" fill="#2F3F3D"/>
+  <g transform="translate(58 132) scale(1.68)" fill="none" stroke="#D8C6A6" stroke-linecap="round" stroke-linejoin="round" stroke-width="8">
+    <path d="M24 145h174"/>
+    <path d="M70 145V82l36-36 46 46v53"/>
+    <path d="M106 145v-52l34-34 42 42v44"/>
+    <path d="M151 101l36-36 39 39v41"/>
+    <path d="M69 143c-28-3-40-30-28-48 24-3 38 16 28 48Z"/>
+    <path d="M69 143c-7-23-17-38-31-48"/>
+    <path d="M70 143c30-5 43-34 29-54-27-1-41 20-29 54Z"/>
+    <path d="M70 143c7-25 18-41 34-54"/>
+    <path d="M196 143c-30-5-43-34-29-54 27-1 41 20 29 54Z"/>
+    <path d="M196 143c-7-25-18-41-34-54"/>
+    <path d="M197 143c28-3 40-30 28-48-24-3-38 16-28 48Z"/>
+    <path d="M197 143c7-23 17-38 31-48"/>
+  </g>
+</svg>
