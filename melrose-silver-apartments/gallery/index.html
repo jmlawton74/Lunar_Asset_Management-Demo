@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -35,7 +35,7 @@
           <span class="brand-location">Tulsa, OK</span>
         </span>
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
         <span></span><span></span><span></span>
         <span class="sr-only">Menu</span>
       </button>
@@ -70,11 +70,11 @@
         </div>
 
           <div class="filters" aria-label="Select gallery property">
-            <button class="filter-button" type="button" aria-pressed="true" data-gallery-filter="0">Melrose Apartments</button><button class="filter-button" type="button" aria-pressed="false" data-gallery-filter="1">Silver Apartments</button>
+            <button class="filter-button" type="button" aria-pressed="true" aria-controls="gallery-panel-1" data-gallery-filter="0">Melrose Apartments</button><button class="filter-button" type="button" aria-pressed="false" aria-controls="gallery-panel-2" data-gallery-filter="1">Silver Apartments</button>
           </div>
 
 
-            <section class="gallery-group" aria-labelledby="gallery-group-1" data-gallery-group="0">
+            <section class="gallery-group" id="gallery-panel-1" aria-labelledby="gallery-group-1" data-gallery-group="0">
               <div class="gallery-group-heading">
                 <h3 id="gallery-group-1">Melrose Apartments</h3>
                 <span>8 photos</span>
@@ -100,7 +100,7 @@
               </div>
             </section>
 
-            <section class="gallery-group" aria-labelledby="gallery-group-2" data-gallery-group="1" hidden>
+            <section class="gallery-group" id="gallery-panel-2" aria-labelledby="gallery-group-2" data-gallery-group="1" hidden>
               <div class="gallery-group-heading">
                 <h3 id="gallery-group-2">Silver Apartments</h3>
                 <span>2 photos</span>

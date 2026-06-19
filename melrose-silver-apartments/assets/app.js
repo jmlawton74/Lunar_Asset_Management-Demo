@@ -5,8 +5,10 @@
   if (navToggle && nav) {
     navToggle.addEventListener("click", () => {
       const isOpen = navToggle.getAttribute("aria-expanded") === "true";
-      navToggle.setAttribute("aria-expanded", String(!isOpen));
-      nav.toggleAttribute("data-open", !isOpen);
+      const nextOpen = !isOpen;
+      navToggle.setAttribute("aria-expanded", String(nextOpen));
+      navToggle.setAttribute("aria-label", nextOpen ? "Close menu" : "Open menu");
+      nav.toggleAttribute("data-open", nextOpen);
     });
   }
 
@@ -16,10 +18,19 @@
       document.querySelectorAll("[data-floor-filter]").forEach((item) => {
         item.setAttribute("aria-pressed", String(item === button));
       });
-      document.querySelectorAll("[data-floor-beds]").forEach((card) => {
+      const cards = Array.from(document.querySelectorAll("[data-floor-beds]"));
+      let visibleCount = 0;
+      cards.forEach((card) => {
         const visible = value === "all" || card.dataset.floorBeds === value;
+        if (visible) visibleCount += 1;
         card.toggleAttribute("hidden", !visible);
       });
+      const status = document.querySelector("[data-floor-filter-status]");
+      if (status) {
+        status.textContent = value === "all"
+          ? `Showing ${visibleCount} floor plans.`
+          : `Showing ${visibleCount} ${value} bedroom floor plan${visibleCount === 1 ? "" : "s"}.`;
+      }
     });
   });
 
