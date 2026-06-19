@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --color-primary: #2f3f3d;
   --color-secondary: #c47a4f;
   --color-accent: #6b7f74;
@@ -1721,7 +1721,18 @@ body.site-red-oak-apartments {
   font-size: 0.88rem;
 }
 
-.photo-credits {
+
+.footer-fair-housing {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.5rem;
+}
+
+.footer-fair-housing img {
+  flex: 0 0 auto;
+  height: 28px;
+  width: auto;
+}.photo-credits {
   color: rgba(255, 255, 255, 0.74);
   font-size: 0.8rem;
   margin: 0.8rem 0;

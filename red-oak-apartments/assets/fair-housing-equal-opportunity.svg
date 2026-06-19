@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 72" role="img" aria-labelledby="title desc">
+  <title id="title">Fair Housing Equal Opportunity logo</title>
+  <desc id="desc">Equal housing opportunity mark with a simple house and equal sign.</desc>
+  <g fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="5">
+    <path d="M14 36 48 9l34 27"/>
+    <path d="M24 33v29h48V33"/>
+    <path d="M37 43h22"/>
+    <path d="M37 53h22"/>
+  </g>
+</svg>
