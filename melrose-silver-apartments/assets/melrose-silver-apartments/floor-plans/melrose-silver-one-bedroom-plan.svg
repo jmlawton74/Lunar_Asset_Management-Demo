@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" role="img" aria-labelledby="title desc">
+  <title id="title">Representative one-bedroom floor plan</title>
+  <desc id="desc">Neutral representative one-bedroom layout artwork for Melrose and Silver Apartments.</desc>
+  <rect width="960" height="640" fill="#F8F3EB"/>
+  <rect x="82" y="78" width="796" height="484" rx="18" fill="#fff" stroke="#31523A" stroke-width="18"/>
+  <path d="M486 78v484M82 360h404M486 254h392M666 254v160M486 414h392" fill="none" stroke="#31523A" stroke-width="12" stroke-linecap="square"/>
+  <path d="M318 562c0-54 43-96 96-96M486 342c-45 0-82-37-82-82M650 330c42 0 76-34 76-76" fill="none" stroke="#C7752A" stroke-width="8" stroke-linecap="round"/>
+  <rect x="118" y="112" width="350" height="230" rx="12" fill="#F8F3EB" stroke="#5F7C9B" stroke-width="5"/>
+  <rect x="500" y="112" width="330" height="128" rx="12" fill="#F8F3EB" stroke="#5F7C9B" stroke-width="5"/>
+  <rect x="500" y="270" width="150" height="118" rx="12" fill="#F8F3EB" stroke="#5F7C9B" stroke-width="5"/>
+  <rect x="118" y="380" width="350" height="148" rx="12" fill="#F8F3EB" stroke="#5F7C9B" stroke-width="5"/>
+  <rect x="685" y="270" width="145" height="118" rx="12" fill="#F8F3EB" stroke="#5F7C9B" stroke-width="5"/>
+  <text x="480" y="42" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800" fill="#31523A">One Bedroom</text>
+  <text x="293" y="236" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="800" fill="#31523A">Living / Dining</text>
+  <text x="665" y="185" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="800" fill="#31523A">Kitchen</text>
+  <text x="575" y="338" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="800" fill="#31523A">Bath</text>
+  <text x="293" y="463" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="800" fill="#31523A">Bedroom</text>
+  <text x="757" y="338" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="800" fill="#31523A">Storage</text>
+  <text x="480" y="610" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#31523A">Representative layout. Confirm current details with leasing.</text>
+</svg>
