@@ -167,6 +167,43 @@
     });
   });
 
+  document.querySelectorAll("[data-mailto-form]").forEach((form) => {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const message = form.querySelector("[data-form-message]");
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      const formData = new FormData(form);
+      formData.set("source-url", window.location.href);
+      const value = (name) => String(formData.get(name) || "").trim();
+      const fullName = [value("first-name"), value("last-name")].filter(Boolean).join(" ");
+      const body = [
+        "Imperial Manor Apartments website inquiry",
+        "",
+        `Name: ${fullName || "Not provided"}`,
+        `Email: ${value("email") || "Not provided"}`,
+        `Phone: ${value("phone") || "Not provided"}`,
+        `Preferred move-in: ${value("move-in") || "Not provided"}`,
+        `Bedrooms: ${value("bedrooms") || "Not provided"}`,
+        `Source page: ${value("source-url")}`,
+        "",
+        "Message:",
+        value("message") || "Not provided"
+      ].join("\n");
+      const to = form.dataset.mailtoTo || "Leasing@imperialapt.net";
+      const subject = form.dataset.mailtoSubject || value("_subject") || "Imperial Manor Apartments website inquiry";
+      window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      if (message) {
+        message.textContent = form.dataset.successMessage || "Your email app should open with the leasing message.";
+      }
+    });
+  });
+
   document.querySelectorAll("[data-contact-form]").forEach((form) => {
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
