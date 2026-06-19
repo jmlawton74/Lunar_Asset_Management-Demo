@@ -93,8 +93,9 @@ textarea {
 
 .button:hover,
 .button:focus-visible {
-  background: var(--color-secondary);
-  border-color: var(--color-secondary);
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
 }
 
 .button.secondary {
@@ -354,9 +355,10 @@ textarea {
 }
 
 .hero .button.secondary {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.72);
-  color: #fff;
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(255, 255, 255, 0.94);
+  color: var(--color-primary);
+  text-shadow: none;
 }
 
 .hero .button.secondary:hover,

@@ -102,8 +102,9 @@ textarea {
 
 .button:hover,
 .button:focus-visible {
-  background: var(--color-secondary);
-  border-color: var(--color-secondary);
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
 }
 
 .button.secondary {
@@ -376,9 +377,10 @@ textarea {
 }
 
 .hero .button.secondary {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.72);
-  color: #fff;
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(255, 255, 255, 0.94);
+  color: var(--color-primary);
+  text-shadow: none;
 }
 
 .hero .button.secondary:hover,
@@ -1319,9 +1321,10 @@ body.site-melrose-silver-apartments {
 }
 
 .site-melrose-silver-apartments .hero .button.secondary {
-  background: rgba(47, 63, 61, 0.66);
-  border-color: rgba(242, 239, 232, 0.76);
-  color: #ffffff;
+  background: #f2efe8;
+  border-color: #f2efe8;
+  color: #2f3f3d;
+  text-shadow: none;
 }
 
 .site-melrose-silver-apartments .hero .button.secondary:hover,
@@ -1349,11 +1352,16 @@ body.site-melrose-silver-apartments {
 }
 
 .site-melrose-silver-apartments .contact-choice:hover,
-.site-melrose-silver-apartments .contact-choice:focus-visible,
+.site-melrose-silver-apartments .contact-choice:focus-visible {
+  background: rgba(216, 198, 166, 0.24);
+}
+
 .site-melrose-silver-apartments .filter-button:hover,
 .site-melrose-silver-apartments .filter-button:focus-visible,
 .site-melrose-silver-apartments .filter-button[aria-pressed="true"] {
-  background: rgba(216, 198, 166, 0.24);
+  background: #2f3f3d;
+  border-color: #2f3f3d;
+  color: #ffffff;
 }
 
 body.site-red-oak-apartments {
